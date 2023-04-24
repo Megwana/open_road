@@ -8,8 +8,9 @@ STATUS = ((0, "Draft"), (1, "Published"))
 
 class Category(models.Model):
     name = models.CharField(max_length=100)
-    description = models.TextField(blank=True)
-    slug = models.SlugField(max_length=100, unique=True)
+
+    def __str__(self):
+        return self.name
 
 
 class Post(models.Model):
@@ -23,7 +24,7 @@ class Post(models.Model):
     updated_on = models.DateTimeField(auto_now=True)
     content = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
-    category = models.ForeignKey(Category, on_delete=models.CASCADE)
+    category = models.ForeignKey(Category, on_delete=models.CASCADE, default=True, null=False)
     status = models.IntegerField(choices=STATUS, default=0)
     likes = models.ManyToManyField(
         User, related_name='blogpost_like', blank=True)
