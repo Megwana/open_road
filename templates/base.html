@@ -42,13 +42,13 @@
               <div class="navbar-nav">
                 {% if user.is_authenticated %}
                 <a class="nav-item nav-link" href="{% url 'home' %}">Home</a>
-                <a class="nav-item nav-link" href="roadtrips/">Road Trips</a>
-                <a class="nav-item nav-link" href="./index.html">Logout</a>
+                <a class="nav-item nav-link" href="{% url 'roadtrips' %}">Road Trips</a>
+                <a class="nav-item nav-link" href="">Logout</a>
                 {% else %}
                 <a class="nav-item nav-link" href="{% url 'home' %}">Home</a>
                 <a class="nav-item nav-link" href="{% url 'account_signup' %}">Register</a>
                 <a class="nav-item nav-link" href="{% url 'account_login' %}">Login</a>
-                <a class="nav-item nav-link" href="roadtrips/">Road Trips</a>
+                <a class="nav-item nav-link" href="{% url 'roadtrips' %}">Road Trips</a>
                 {% endif %}
             </div>
         </div>
