@@ -6,10 +6,12 @@
 
 {% block content %}
 <section class="container">
-  <h1>{% trans "Sign In" %}</h1>
+  <div class="row">
+    <div class="col-md-8 mt-3 offset-md-2">
+      <h1>{% trans "Login" %}</h1>
 
   <p>{% blocktrans %}If you have not created an account yet, then please
-  <a href="{{ signup_url }}">sign up</a> first.{% endblocktrans %}</p>
+  <a href="{{ signup_url }}">register</a> first.{% endblocktrans %}</p>
 
   <form class="login" method="POST" action="{% url 'account_login' %}">
     {% csrf_token %}
@@ -21,6 +23,8 @@
     </div>
     <button class="btn btn-outline-dark" type="submit">{% trans "Login" %}</button>
   </form>
+    </div>
+  </div>
 </section>
 
 {% endblock %}

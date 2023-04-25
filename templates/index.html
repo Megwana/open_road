@@ -62,12 +62,21 @@
                 <div class="card">
                     <img src="https://images.pexels.com/photos/5052875/pexels-photo-5052875.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="card-img-top" alt="Image of a person typing on their keyboard">
                     <div class="card-body">
-                        <h5 class="card-title">Want to view some more of our Road Trips?</h5>
-                        <p class="card-text">You can view more of our road trips by either logging in or signing up by clicking the buttons below.</p>
-                        <div>
-                            <a href="/login" class="btn btn-outline-dark">Login</a>
-                            <a href="/signup" class="btn btn-dark">Sign Up</a>
-                        </div>
+                        {% if user.is_authenticated %}
+                          <h5 class="card-title">View</h5>
+                          <p class="card-text">View</p>
+                          <div>
+                            <a href="{% url 'account_login' %}" class="View">Login</a>
+                          </div>
+
+                            {% else %}
+                            <h5 class="card-title">Want to view some more of our Road Trips?</h5>
+                            <p class="card-text">You can view more of our road trips by either logging in or signing up by clicking the buttons below.</p>
+                            <div>
+                            <a href="{% url 'account_login' %}" class="btn btn-outline-dark">Login</a>
+                            <a href="{% url 'account_signup' %}" class="btn btn-dark">Register</a>
+                            </div>
+                            {% endif %}
                     </div>
                 </div>
             </div>
