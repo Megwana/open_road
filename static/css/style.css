@@ -1,0 +1,77 @@
+/* styling for base.html */
+h1, h2 {
+    text-align: center;
+}
+.a .logo .fa-map{
+    color: white;
+}
+
+.fa-map {
+    margin-left: 20px;
+}
+
+.navbar-nav .nav-link {
+    padding-right: 0;
+    padding-left: 20px;
+}
+
+.navbar-dark .navbar-toggler {
+    margin-right: 20px;
+}
+
+h2 {
+    padding: 20px;
+}
+
+.alert-success {
+    margin: 0;
+}
+
+/* styling for home.html */
+
+.img-fluid {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5));
+    position: relative;
+}
+
+.wel-title {
+    color: white;
+    text-align: center;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.info {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.info h3 {
+    text-align: center;
+    padding: 10px;
+    margin: 20px 0 5px;
+}
+
+hr {
+    border: rgb(201, 201, 201) 1px;
+    border-bottom: solid;
+    width: 80%;
+}
+
+.card {
+    margin: 20px 0;
+}
+
+.col-sm h4 {
+    text-align: center;
+    padding: 0;
+}
+
+.topBtn {
+    margin: 50px auto;
+}
