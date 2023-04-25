@@ -1,7 +1,4 @@
 /* styling for base.html */
-h1, h2 {
-    text-align: center;
-}
 
 .logo a {
     text-decoration: none;
@@ -14,6 +11,16 @@ h1, h2 {
     color: white;
 
 }
+
+a, a:hover {
+    text-decoration: none;
+    color: black;
+}
+
+.card-title h2 {
+    text-align:justify
+}
+
 .fa-map {
     margin-left: 20px;
 }
@@ -42,6 +49,7 @@ h1, h2 {
 .img-fluid {
     background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5));
     position: relative;
+    filter: brightness(60%);
 }
 
 h2 .wel-title {
@@ -139,4 +147,11 @@ hr {
     text-decoration: none;
     border: none;
     background: none;
+}
+
+.image-flash {
+    min-width: 30%;
+    background-color: #023020;
+    color: white;
+    padding-left: 10px;
 }
