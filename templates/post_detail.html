@@ -2,16 +2,16 @@
 {% block content %}
 {% load crispy_forms_tags %}
 
-<div class="jumbotron">
-    <div class="container">
-        <div class="row g-0">
+<header class="masthead">
+    <div class="container h-100">
+        <div class="row h-100 align-items-center">
             <div class="col-md-6 jumbotron-text">
                 <!-- Post title goes in these h1 tags -->
-                <h1 class="post-title display-4">{{ post.title }}</h1>
+                <h1 class="post-title display-4 text-justify">{{ post.title }}</h1>
                 <!-- Post author goes before the | the post's created date goes after -->
-                <p class="post-subtitle">{{ post.author }} | {{ post.created_on }}</p>
+                <p class="post-subtitle lead text-justify">{{ post.author }} | {{ post.created_on }}</p>
             </div>
-            <div class="d-none d-md-block col-md-6 jumbotron-image">
+            <div class=" col-md-6 jumbotron-image">
                 <!-- The featured image URL goes in the src attribute -->
                 {% if "placeholder" in post.featured_image.url %}
                 <img src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" width="100%">
@@ -21,7 +21,7 @@
             </div>
         </div>
     </div>
-</div>
+</header>
 <div class="container">
     <div class="row">
         <div class="col card mb-4  mt-3 left  top">
