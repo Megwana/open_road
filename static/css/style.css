@@ -2,10 +2,16 @@
 h1, h2 {
     text-align: center;
 }
-.a .logo .fa-map{
+
+a {
+    text-decoration: none;
     color: white;
 }
 
+a:hover {
+    text-decoration: none;
+    color: white;
+}
 .fa-map {
     margin-left: 20px;
 }
