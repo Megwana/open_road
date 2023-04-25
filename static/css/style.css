@@ -20,7 +20,9 @@ h1, h2 {
 }
 
 h2 {
-    padding: 20px;
+    padding: 30px;
+    margin-top: 40px;
+    font-size:4vw;
 }
 
 .alert-success {
