@@ -3,14 +3,16 @@ h1, h2 {
     text-align: center;
 }
 
-a {
+.logo a {
     text-decoration: none;
     color: white;
+
 }
 
-a:hover {
+.logo a:hover {
     text-decoration: none;
     color: white;
+
 }
 .fa-map {
     margin-left: 20px;
@@ -25,11 +27,11 @@ a:hover {
     margin-right: 20px;
 }
 
-h2 {
+/* h2 {
     padding: 30px;
     margin-top: 40px;
     font-size:4vw;
-}
+} */
 
 .alert-success {
     margin: 0;
