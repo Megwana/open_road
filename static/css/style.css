@@ -135,3 +135,8 @@ hr {
     padding: 20px;
 }
 
+.like-btn {
+    text-decoration: none;
+    border: none;
+    background: none;
+}
