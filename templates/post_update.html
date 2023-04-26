@@ -1,5 +1,5 @@
 {% extends "base.html" %} 
-{% block title %} Add New Roadtrip {% endblock %}
+{% block title %} Edit Roadtrip Post {% endblock %}
 {% load crispy_forms_tags %}
 {% block content %}
 <!-- <div>
@@ -14,13 +14,13 @@
     {% endif %}
 </div> -->
     <section class="container">
-        <h1>Add Roadtrip Post</h1>
+        <h1>Edit Roadtrip Post</h1>
         <div class="form-group">
             <form method="POST">
                 {% csrf_token %}
                 {{  form.as_p }}
                 </div>
-                <button class="btn btn-outline-dark" type="submit">Submit Post</button>
+                <button class="btn btn-outline-dark" type="submit">Update Post</button>
             </form>
         </div>
     </section>

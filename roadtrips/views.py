@@ -4,7 +4,7 @@ from django.views.generic import ListView, CreateView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import HttpResponseRedirect
 from .models import Post, Category, Comment
-from .forms import CommentForm
+from .forms import CommentForm, PostForm
 
 
 class PostList(ListView):
@@ -81,5 +81,5 @@ class PostLike(View):
 
 class PostCreate(CreateView):
     model = Post
+    form_class = PostForm
     template_name = 'post_form.html'
-    fields = ['title', 'author', 'excerpt', 'category', 'content']
