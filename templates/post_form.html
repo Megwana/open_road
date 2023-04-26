@@ -2,16 +2,7 @@
 {% block title %} Add New Roadtrip {% endblock %}
 {% load crispy_forms_tags %}
 {% block content %}
-    <div class="content-section">
-        <form method="POST">
-            {% csrf_token %}
-            <fieldset class="form-group">
-                <legend class="border-botton mb-4">New Road Trip</legend>
-                {{ form|crispy }}
-            </fieldset>
-            <div class="form-group">
-                <button class="btn btn-dark" type="submit">Submit Post</button>
-            </div>
-        </form>
+    <div class="container">
+        <h1>Add Roadtrip Post</h1>
     </div>
 {% endblock content %}

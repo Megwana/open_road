@@ -79,10 +79,7 @@ class PostLike(View):
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 
 
-class PostList(LoginRequiredMixin, CreateView):
+class PostCreate(CreateView):
     model = Post
-    fields = ['title', 'content', 'category']
-
-    def form_valid(self, form):
-        form.instance.author = self.request.user        
-        return super().form_valid(form)
+    template_name = 'post_form.html'
+    fields = ['title', 'author', 'excerpt', 'category', 'content']
