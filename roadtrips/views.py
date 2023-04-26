@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
-from django.views.generic import ListView, CreateView
+from django.views.generic import ListView, CreateView, UpdateView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import HttpResponseRedirect
 from .models import Post, Category, Comment
@@ -83,3 +83,10 @@ class PostCreate(CreateView):
     model = Post
     form_class = PostForm
     template_name = 'post_form.html'
+
+
+class PostUpdate(UpdateView):
+    model = Post
+    form_class = PostForm
+    template_name = 'post_update.html'
+    fields = ['title', 'excerpt', 'featured-image','content']
