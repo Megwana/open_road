@@ -53,7 +53,14 @@ Due to the site being able towards a younger audience who often browse on mobile
 
 
 ### Scope
+
+To achieve both user and business goals, I will include the following features:
+
 ### Structure
+The design of website is made to be clean cut and simple. This is to offer key information quick and locate what is desired rather than reading unessary information. 
+
+App structure:
+
 #### Skeleton
 
 [Wireframes can be viewed here](https://share.balsamiq.com/c/jFLAg5a7apUrV86ucTo7tU.png)
