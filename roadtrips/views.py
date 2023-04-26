@@ -1,11 +1,13 @@
 from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
+from django.views.generic import ListView, CreateView
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import HttpResponseRedirect
 from .models import Post, Category, Comment
 from .forms import CommentForm
 
 
-class PostList(generic.ListView):
+class PostList(ListView):
     model = Post
     queryset = Post.objects.filter(status=1).order_by('-created_on')
     template_name = 'roadtrips.html'
@@ -75,3 +77,12 @@ class PostLike(View):
         else:
             post.likes.add(request.user)
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+
+
+class PostList(LoginRequiredMixin, CreateView):
+    model = Post
+    fields = ['title', 'content', 'category']
+
+    def form_valid(self, form):
+        form.instance.author = self.request.user        
+        return super().form_valid(form)
