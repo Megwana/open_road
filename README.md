@@ -39,6 +39,12 @@ The target audience for Open Road are:
 - People that have potentially less responsibilities and are able to take a road trip
 - People who enjoy getting inspiration from others experiences and sharing their own
 
+The users will be looking for:
+- The ability to navigate the site with ease.
+- Read concise information about road trips the user is interested in. 
+- The user is able to create a user account. Which links to the following point below:
+- The ability to share their own experiences via writing their own blog or commenting on another post. 
+
 ### User Stories
 ### Scope
 ### Structure
