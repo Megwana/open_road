@@ -17,8 +17,10 @@
                                 <img class="card-img-top" src=" {{ post.featured_image.url }}">
                                 {% endif %}
                                 <div class="image-flash">
-                                    <p class="author">Author: {{ post.author }}</p>
+                                    <p class="author">Author: {{ post.author }}</p> - 
                                 </div>
+                                <a href="{% url 'post_update' post.pk %}">Edit</a>
+                                <a href="{% url 'post_delete' post.pk %}">Delete</a>
                             </div>
                             <a href="{% url 'post_detail' post.pk %}" class="post-link">
                                 <h2 class="card-title">{{ post.title }}</h2>

@@ -3,6 +3,7 @@ from django.views import generic, View
 from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import HttpResponseRedirect
+from django.urls import reverse_lazy
 from .models import Post, Category, Comment
 from .forms import CommentForm, PostForm
 
@@ -17,8 +18,9 @@ class PostList(ListView):
 class PostDetail(View):
 
     def get(self, request, pk, *args, **kwards):
+        # status=1 to get only published posts
         queryset = Post.objects.filter(status=1)
-        post = get_object_or_404(queryset, post.pk)
+        post = get_object_or_404(queryset, pk=pk)
         comments = post.comments.filter(approved=True).order_by('created_on')
         liked = False
         if post.likes.filter(id=self.request.user.id).exists():
@@ -38,7 +40,7 @@ class PostDetail(View):
 
     def post(self, request, pk, *args, **kwards):
         queryset = Post.objects.filter(status=1)
-        post = get_object_or_404(queryset, post=pk)
+        post = get_object_or_404(queryset, pk=pk)
         comments = post.comments.filter(approved=True).order_by('created_on')
         liked = False
         if post.likes.filter(id=self.request.user.id).exists():
@@ -76,7 +78,7 @@ class PostLike(View):
             post.likes.remove(request.user)
         else:
             post.likes.add(request.user)
-        return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+        return HttpResponseRedirect(reverse('post_detail', args=[post.pk]))
 
 
 class PostCreate(CreateView):
@@ -89,9 +91,10 @@ class PostUpdate(UpdateView):
     model = Post
     form_class = PostForm
     template_name = 'post_update.html'
-    fields = ['title', 'excerpt', 'featured-image', 'content']
 
-class PostUpdate(DeleteView):
+
+class PostDelete(DeleteView):
     model = Post
     form_class = PostForm
     template_name = 'post_delete.html'
+    success_url = reverse_lazy('home')
