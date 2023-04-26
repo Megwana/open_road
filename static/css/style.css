@@ -52,6 +52,11 @@ a, a:hover {
     filter: brightness(60%);
 }
 
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
 h2 .wel-title {
     color: white;
     text-align: center;
@@ -89,6 +94,7 @@ hr {
     text-align: center;
     padding: 0;
 }
+
 
 /* styling for home.html */
 
@@ -141,6 +147,10 @@ hr {
 
 .card-container {
     padding: 20px;
+}
+
+.form-group {
+    margin: 30px;
 }
 
 .like-btn {
