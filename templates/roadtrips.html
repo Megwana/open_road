@@ -22,8 +22,8 @@
                                 <!-- Only show Edit and Delete is user is logged in -->
                                 {% if user.is_authenticated %}
                                     {% if user.id == post.author.id %}
-                                        <a href="{% url 'post_update' post.pk %}">Edit</a>
-                                        <a href="{% url 'post_delete' post.pk %}">Delete</a>
+                                    <a class="btn btn-success" href="{% url 'post_update' post.pk %}">Edit</a>
+                                    <a class="btn btn-danger" href="{% url 'post_delete' post.pk %}">Delete</a>
                                     {% endif %}
                                 {% endif %}
                             </div>
