@@ -31,13 +31,15 @@
 
 With the core UX Principles in mind, I began brain storming and deciding who my target audience for my road trip website and the features I can intergrate that can benefit users. 
 
-Following the pandemic, there are circa three years worth of missed years where people were unable to travel and explore. We are seeing more [young people](https://www.travelmarketreport.com/RetailStrategies/articles/Younger-Travelers-Plan-to-Travel-More-Spend-More-Post-Pandemic) wanting to travel and have new experiences to make up for lost time. 
-
 The target audience for Open Road are:
 - 21-35 year olds
 - People who seek adventure and not afraid to go on the off beaten track
 - People that have potentially less responsibilities and are able to take a road trip
 - People who enjoy getting inspiration from others experiences and sharing their own
+
+Following the pandemic, there are circa three years worth of missed years people were unable to travel and explore. We are seeing more [young people](https://www.travelmarketreport.com/RetailStrategies/articles/Younger-Travelers-Plan-to-Travel-More-Spend-More-Post-Pandemic) wanting to travel and have new experiences to make up for lost time. 
+
+As the site is specifically road trip orientated travel, younger people often go on holiday with friends and have potentially less responsibilities such as children/mortgage. A road trip can be as short or as long as you want it to be, providing flexibility.
 
 The users will be looking for:
 - The ability to navigate the site with ease.
@@ -45,7 +47,11 @@ The users will be looking for:
 - The user is able to create a user account. Which links to the following point below:
 - The ability to share their own experiences via writing their own blog or commenting on another post. 
 
+Due to the site being able towards a younger audience who often browse on mobile devices; I will use bootstrap elements to customise and create a responsive site. Often young people are looking for a memory building experience with friends/ loved ones or finding themselves in a solo experience; which road trips can offer. 
+
 ### User Stories
+
+
 ### Scope
 ### Structure
 #### Skeleton
