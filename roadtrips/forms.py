@@ -6,7 +6,7 @@ from django_summernote.widgets import SummernoteWidget, SummernoteInplaceWidget
 class PostForm(forms.ModelForm):
     class Meta:
         model = Post
-        fields = fields = ['title', 'slug', 'excerpt', 'category',
+        fields = fields = ['title', 'slug', 'author', 'excerpt', 'category',
                            'featured_image', 'content']
         summernote_fields = ['content']
         

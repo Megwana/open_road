@@ -13,15 +13,25 @@
         </div>
     {% endif %}
 </div> -->
-    <section class="container">
-        <h1>Edit Roadtrip Post</h1>
-        <div class="form-group">
-            <form method="POST">
-                {% csrf_token %}
-                {{  form.as_p }}
-                </div>
-                <button class="btn btn-outline-dark" type="submit">Update Post</button>
-            </form>
-        </div>
-    </section>
+{% if user.is_authenticated %}
+    {% if user.id == post.author.id %}
+        <section class="container">
+            <h1>Edit Roadtrip Post</h1>
+            <div class="form-group">
+                <form method="POST">
+                    {% csrf_token %}
+                    {{  form.as_p }}
+                    </div>
+                    <button class="btn btn-outline-dark" type="submit">Update Post</button>
+                </form>
+            </div>
+        </section>
+        {% else %}
+        <h1 class="deny_update">Your Not allowed to be here, please click <a href="{ url '/' }">HOME</a> to return</h1>
+
+    {% endif %}
+    {% else %}
+    <h1 class="deny_update">Your Not allowed to be here, please click <a href="{ url '/' }">HOME</a> to return</h1>
+
+{% endif %}
 {% endblock %}

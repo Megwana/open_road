@@ -10,6 +10,12 @@
                 <h1 class="post-title display-4 text-justify">{{ post.title }}</h1>
                 <!-- Post author goes before the | the post's created date goes after -->
                 <p class="post-subtitle lead text-justify">{{ post.author }} | {{ post.created_on }}</p>
+                {% if user.is_authenticated %}
+                                    {% if user.id == post.author.id %}
+                                        <a href="{% url 'post_update' post.pk %}">Edit</a>
+                                        <a href="{% url 'post_delete' post.pk %}">Delete</a>
+                                    {% endif %}
+                                {% endif %}
             </div>
             <div class=" col-md-6 jumbotron-image">
                 <!-- The featured image URL goes in the src attribute -->

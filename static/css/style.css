@@ -155,3 +155,12 @@ hr {
     color: white;
     padding-left: 10px;
 }
+
+.col-md-4 {
+    padding: 20px;
+}
+
+.deny_create, .deny_update {
+    justify-content: center;
+    text-align: center;
+}
