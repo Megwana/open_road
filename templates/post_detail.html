@@ -7,7 +7,7 @@
         <div class="row h-100 align-items-center">
             <div class="col-md-6 jumbotron-text">
                 <!-- Post title goes in these h1 tags -->
-                <h1 class="post-title display-4 text-justify"><a href="{% url 'roadtrips' post.pk %}">{{ post.title }}</h1></a>
+                <h1 class="post-title display-4 text-justify">{{ post.title }}</h1>
                 <!-- Post author goes before the | the post's created date goes after -->
                 <p class="post-subtitle lead text-justify">{{ post.author }} | {{ post.created_on }}</p> - <a href="{% url 'post_update' post.pk %}">Edit</a>
             </div>
