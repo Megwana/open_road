@@ -1,6 +1,6 @@
 {% extends "base.html" %} {% block title %} Road Trips {% endblock %}
 {% block content %}
-<div class="container fluid">
+<div class="container py-5 px-4">
     <h1>Road Trips</h1>
     <div class="row">
         <!-- Blog Entries Column -->
@@ -21,12 +21,6 @@
                                     <p class="author">Author: {{ post.author }}</p>
                                 </div>
                                 <!-- Only show Edit and Delete is user is logged in -->
-                                {% if user.is_authenticated %}
-                                    {% if user.id == post.author.id %}
-                                    <a class="btn btn-success" href="{% url 'post_update' post.pk %}">Edit</a>
-                                    <a class="btn btn-danger" href="{% url 'post_delete' post.pk %}">Delete</a>
-                                    {% endif %}
-                                {% endif %}
                             </div>
                             <a href="{% url 'post_detail' post.pk %}" class="post-link">
                                 <h2 class="card-title">{{ post.title }}</h2>
@@ -34,7 +28,13 @@
                             </a>
                             <hr />
                             <p class="card-text text-muted h6">{{ post.created_on}} <i class="far fa-heart"></i>
-                                {{ post.number_of_likes }}</p>
+                                {{ post.number_of_likes }} | {% if user.is_authenticated %}
+                                {% if user.id == post.author.id %}
+                                <a class="btn btn-success" href="{% url 'post_update' post.pk %}">Edit</a>
+                                <a class="btn btn-danger" href="{% url 'post_delete' post.pk %}">Delete</a>
+                                {% endif %}
+                            {% endif %}</p>
+                            
                         </div>
                     </div>
                 </div>

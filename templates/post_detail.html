@@ -63,6 +63,9 @@
                             <!-- Our total_comments variable goes before the closing strong tag -->
                             {{ total_comments }}</strong>
                         {% endwith %}
+                        {% if user == comment.user %}
+                            <a href="">delete comment</a> 
+                        {% endif %}
                     </div>
                 </div>
             </div>
@@ -87,6 +90,11 @@
                     </p>
                     {{ comment.body | linebreaks }}
                 </div>
+                {% if user.is_authenticated %}
+                    {% if user.id == comment.author %}
+                        <a class="btn btn-danger" href="{% url 'comment_delete' post.pk comment.pk %}">Delete</a>
+                    {% endif %}
+                {% endif %}
                 {% endfor %}
             </div>
         </div>

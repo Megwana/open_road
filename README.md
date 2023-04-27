@@ -89,6 +89,22 @@ App structure:
 
 - [Balsamiq](https://balsamiq.com/wireframes/?gclid=CjwKCAjw8-OhBhB5EiwADyoY1eL0Yyb7LjlqjLVuM9xfXLRdmzK9m1CxpreaZIzIzxFIs8Oms8CNSBoCPagQAvD_BwE)
 
+- []()
+- []()
+- []()
+- []()
+- []()
+- []()
+- []()
+- []()
+- []()
+- []()
+- []()
+- []()
+- []()
+- []()
+- []()
+
 ## Testing
 --- 
 ### Code Validation

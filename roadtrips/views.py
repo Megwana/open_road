@@ -98,3 +98,9 @@ class PostDelete(DeleteView):
     form_class = PostForm
     template_name = 'post_delete.html'
     success_url = reverse_lazy('home')
+
+
+# class CommentDelete(DeleteView):
+#     form_class = CommentForm
+#     template_name = 'post_delete.html'
+#     success_url = reverse_lazy('home')
