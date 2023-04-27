@@ -145,9 +145,24 @@ Instructions:
 3. Give your project a unique name. You will be prompted to change it if it is not.
 4. Select the region you are in (e.g. mine is EU).
 
+In the Heroku settings:
+You need to set your Environment Variable to essure your application deploys successfully.
+- Click `Revel Config Vars` and enter:
+ - SECRET_KEY - to be set to your chosen key
+- CLOUDINARY_URL - to be set to your Cloudinary API environment variable
+- PORT = 8000
 
+Heroku Deployment:
+- Click Deploy tab
+- Click `Github-connect` to connect your Github account.
+- Search for your repository name.
+- Select the correct repository name and click `connect`.
+- You can either manually or automatically deploy your application. 
+- Select your deployment method and click `Deploy Branch`.
+- Once ready, you will be able to click `View`. 
 --- 
 ## Credits
 --- 
 ## Acknowledgments
+I would like to thank my course mentor Akshat Garg for his guidance and support in our sessions. 
 --- 
