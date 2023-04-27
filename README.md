@@ -106,13 +106,30 @@ App structure:
 - []()
 
 ## Testing
---- 
 ### Code Validation
 ### Automated Testing
 ### Manual Testing
 ### Bugs and Fixes
-
+--- 
 ## Deployment 
+The main branch of my repository open_road, has been used for the deployment of this application.
+
+### Github and Gitpod
+
+In order to deploy my Django application, I used the Code Institute Python Essentials Template.
+
+Instructions: 
+- Click on `Use This Template` button.
+- Then create a repository name and a concise description.
+- Click on `Create Repository from Template`. This will then create your repository and open up into its repository page.
+- Then create a Gitpod Workspace. Click on `Gitpod`. Expect a few minutes of loading while it sets up.
+- Rule of thumb should be to return to the Gitpod Workspace when you want to continue working on the project rather than clicking on `Gitpod` in your repository; as this will create a new workspace rather than continue on the one you are currently working on. 
+- (Optional: but it is good to pin your workspace so that it isn't deleted).
+- It is important to commit your work carried out often with clear messages. The following commands are used:
+3 Step Commit Process:
+    - `git add .`: adds **ALL** modified files to staging area
+    - `git commit -m "A message explaining what you are committing"`: commits changes to a local repository.
+    - `git push`: pushes all committed changes to the subject Github repository.
 --- 
 ## Credits
 --- 
