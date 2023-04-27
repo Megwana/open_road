@@ -1,12 +1,23 @@
 {% extends "base.html" %} {% block title %} Home Page {% endblock %}
 {% block content %}
-<section>
+<main class="container p-4">
+  <!-- Feature Content -->
+  <div class="p-4 p-md-5 mb-4 text-white rounded" style="background-color: green;">
+    <div class="col-md-6 px-0">
+      <h1 class="display-4 fst-italic">Ready for an Adventure?</h1>
+      <p class="lead my-3">Welcome to Open Road</p>
+      <p class="lead mb-0">
+        <a href="" class="text-white fw-bold">Read More</a>
+      </p>
+    </div>
+  </div>
+</main>
+<!--<section>
     <div class="hero">
-        <img src="https://images.pexels.com/photos/3935702/pexels-photo-3935702.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="img-fluid" alt="woman looking at map" style="max-width: 100%; height:auto;">
-        <div class="wel-title">
-        <h2 class="welcome">Welcome to Open Road</h2>
-        <h3 class="subheading">A space to share and read travel posts to inspire your inner-adventurer!</h3>
-        <button class="btn btn-light"><a href="{% url 'roadtrips' %}">Read Travel Posts</a>
+        <div>
+        <h2>Welcome to Open Road</h2>
+        <h3>A space to share and read travel posts to inspire your inner-adventurer!</h3>
+        <button><a href="{% url 'roadtrips' %}">Read Travel Posts</a>
         </div>
     </div>
 </section>
@@ -24,12 +35,12 @@
                         <h5 class="card-title">Get to know us</h5>
                         <p class="card-text">If you want to read more about who we are and our company, click the button below for more information.</p>
                         <div>
-                            <!-- Button trigger modal -->
+                            Button trigger modal
                             <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#aboutUs">
                               About Us
-                            </button>
-                            <!-- Modal -->
-                            <div class="modal fade" id="aboutUs" tabindex="-1" aria-labelledby="aboutUslLabel" aria-hidden="true">
+                            </button> 
+                            Modal -->
+                            <!-- <div class="modal fade" id="aboutUs" tabindex="-1" aria-labelledby="aboutUslLabel" aria-hidden="true">
                               <div class="modal-dialog">
                                 <div class="modal-content">
                                   <div class="modal-header">
@@ -118,6 +129,5 @@
                 </div>
             </div>
         </div>
-    </div>
-</section>
+</section> --> 
 {% endblock %}
