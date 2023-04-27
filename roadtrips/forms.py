@@ -12,7 +12,8 @@ class PostForm(forms.ModelForm):
         widgets = {
             'title': forms.TextInput(attrs={'class': 'form-control'}),
             'slug': forms.TextInput(attrs={'class': 'form-control'}),
-            'author': forms.Select(attrs={'class': 'form-control'}),
+            'author': forms.TextInput(attrs={'class': 'form-control', 'value': '', 'id': 'hide-author', 'type':'hidden'}),
+            # 'author': forms.Select(attrs={'class': 'form-control'}),
             'featured_image': forms.FileInput(attrs={'class': 'form-control-file'}),
             'excerpt': forms.TextInput(attrs={'class': 'form-control'}),
             'content': SummernoteWidget(),
