@@ -80,8 +80,10 @@ App structure:
 - HTML
 - CSS
 - JavaScript
-- Python
-- Django
+- [Python](https://www.python.org/)
+    - Python used to write all of the code in this application that makes it fully functional.
+- [Django](https://www.djangoproject.com/)
+    - Django is the framework that has been used to build the overall project and all its apps.
 
 ### Tools 
 
@@ -89,21 +91,25 @@ App structure:
 
 - [Balsamiq](https://balsamiq.com/wireframes/?gclid=CjwKCAjw8-OhBhB5EiwADyoY1eL0Yyb7LjlqjLVuM9xfXLRdmzK9m1CxpreaZIzIzxFIs8Oms8CNSBoCPagQAvD_BwE)
 
+- [Font Awesome](https://fontawesome.com/)
+    - Used for the icons in the website.
+- [GitHub](https://github.com/)
+    - Used to store code for the project once pushed.
+- [Pep8](http://pep8online.com/)
+    - Used to test code for any issues/errors.
+ [W3C Markup Validation Service](https://validator.w3.org/) 
+    - Used to validate HTML code written and used for this webpage.
+- [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/#validate_by_input)
+    - Used to validate CSS code written and used for this webpage.
+- [JSHint](https://jshint.com/)
+    - Used to validate JS code.
+- [PostgresSQL/ElephantSQL](https://www.elephantsql.com/)
+    - I have used ElephantSQL a PostgreSQL relational database in deployment to store the data for my models.
 - []()
 - []()
 - []()
 - []()
-- []()
-- []()
-- []()
-- []()
-- []()
-- []()
-- []()
-- []()
-- []()
-- []()
-- []()
+
 
 ## Testing
 ### Code Validation
