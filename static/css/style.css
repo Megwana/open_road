@@ -34,16 +34,6 @@ a, a:hover {
     margin-right: 20px;
 }
 
-/* h2 {
-    padding: 30px;
-    margin-top: 40px;
-    font-size:4vw;
-} */
-
-h2 .welcome, h3 .subheader {
-    padding: 30px;
-}
-
 .alert-success {
     margin: 0;
 }

@@ -64,18 +64,15 @@ App structure:
 #### Skeleton
 
 [Wireframes can be viewed here](https://share.balsamiq.com/c/jFLAg5a7apUrV86ucTo7tU.png)
-
-## Features
 ---
+## Features
 ### Home Page
 ### Road trips
 ### pending
 ### Contact Form
 ### Footer
-
-## Technologies Used
 ---
-
+## Technologies Used
 ### Languages 
 - HTML
 - CSS
@@ -171,4 +168,3 @@ Heroku Deployment:
 --- 
 ## Acknowledgments
 I would like to thank my course mentor Akshat Garg for his guidance and support in our sessions. 
---- 

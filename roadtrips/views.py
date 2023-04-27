@@ -51,7 +51,7 @@ class PostDetail(View):
 
         if comment_form.is_valid():
             comment_form.instance.email = request.user.email
-            comment_form.instance.name = request.user.username
+            comment_form.instance.name = request.user
             comment = comment_form.save(commit=False)
             comment.post = post
             comment.save()
@@ -77,17 +77,17 @@ def form_valid(self, form):
     return super().form_valid(form)
 
 
-class CommentDelete(DeleteView):
-    """connects Comment to DeleteView function """
-    model = Comment
-    template_name = 'comment_delete.html'
-    context_object_name = 'comment'
+# class CommentDelete(DeleteView):
+#     """connects Comment to DeleteView function """
+#     model = Comment
+#     template_name = 'comment_delete.html'
+#     context_object_name = 'comment'
 
-    def get_success_url(self, *args):
-        """ Success url return to blogpost in question """
-        self.success_url = f'/{self.get_object().post.slug}'
-        self.slug = self.get_object().post.slug
-        return reverse_lazy('post_detail', args=[self.slug])
+#     def get_success_url(self, *args):
+#         """ Success url return to blogpost in question """
+#         self.success_url = f'/{self.get_object().post.slug}'
+#         self.slug = self.get_object().post.slug
+#         return reverse_lazy('post_detail', args=[self.slug])
 
 
 class PostLike(View):
