@@ -9,7 +9,6 @@ class PostForm(forms.ModelForm):
         fields = fields = ['title', 'slug', 'author', 'excerpt', 'category',
                            'featured_image', 'content']
         summernote_fields = ['content']
-        
         widgets = {
             'title': forms.TextInput(attrs={'class': 'form-control'}),
             'slug': forms.TextInput(attrs={'class': 'form-control'}),

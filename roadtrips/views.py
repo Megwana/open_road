@@ -50,7 +50,7 @@ class PostDetail(View):
 
         if comment_form.is_valid():
             comment_form.instance.email = request.user.email
-            comment_form.instance.name = request.user.username
+            comment_form.instance.name = request.user
             comment = comment_form.save(commit=False)
             comment.post = post
             comment.save()
@@ -65,9 +65,27 @@ class PostDetail(View):
                 "comments": comments,
                 "commented": True,
                 "liked": liked,
-                "comment_form": CommentForm()
+                "comment_form": CommentForm
             },
         )
+
+
+def form_valid(self, form):
+    """ validate form and connect to user """
+    comment_form.instance.created_by = self.request.user
+    return super().form_valid(form)
+
+
+class CommentDelete(DeleteView):
+    model = Comment
+    template_name = 'comment_delete.html'
+    context_object_name = 'comment'
+
+    def get_success_url(self, *args):
+        """ Success url return to blogpost in question """
+        self.success_url = f'/{self.get_object().post.slug}'
+        self.slug = self.get_object().post.slug
+        return reverse_lazy('post_detail', args=[post.pk])
 
 
 class PostLike(View):
@@ -98,9 +116,3 @@ class PostDelete(DeleteView):
     form_class = PostForm
     template_name = 'post_delete.html'
     success_url = reverse_lazy('home')
-
-
-# class CommentDelete(DeleteView):
-#     form_class = CommentForm
-#     template_name = 'post_delete.html'
-#     success_url = reverse_lazy('home')

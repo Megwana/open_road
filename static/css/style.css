@@ -40,6 +40,10 @@ a, a:hover {
     font-size:4vw;
 } */
 
+h2 .welcome, h3 .subheader {
+    padding: 30px;
+}
+
 .alert-success {
     margin: 0;
 }

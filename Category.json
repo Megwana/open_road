@@ -1,0 +1,1 @@
+[{"model": "roadtrips.category", "pk": 1, "fields": {"name": "1-2 Week Trip"}}, {"model": "roadtrips.category", "pk": 2, "fields": {"name": "Under 1 Week Trip"}}, {"model": "roadtrips.category", "pk": 3, "fields": {"name": "Over 2 Week Trip"}}]
