@@ -11,7 +11,7 @@ class CategoryAdmin(admin.ModelAdmin):
 
 @admin.register(Post)
 class PostAdmin(SummernoteModelAdmin):
-    """ Handle functionalitly of posts in the admin view """
+    """ Handle functionality of posts in the admin view """
     list_display = ('title', 'slug', 'status', 'created_on')
     search_fields = ['title', 'content']
     list_filter = ('status', 'created_on')
