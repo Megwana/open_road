@@ -1,9 +1,9 @@
 {% extends "base.html" %} 
-{% block title %} Delete Your Comment {% endblock %}
+{% block title %} Delete Comment Page {% endblock %}
 {% load crispy_forms_tags %}
 {% block content %}
     <section class="container">
-        <h1>Delete: {{ comment.id }}</h1>
+        <h1>Delete Your Commment</h1>
         <div class="form-group">
             <form method="POST">
                 {% csrf_token %} <br>

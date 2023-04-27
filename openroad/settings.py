@@ -50,6 +50,7 @@ SITE_ID = 1
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
 
+
 MESSAGE_TAGS = {
     messages.DEBUG: 'alert-warning',
     messages.INFO: 'alert-info',

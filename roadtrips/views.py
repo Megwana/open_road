@@ -9,6 +9,7 @@ from .forms import CommentForm, PostForm
 
 
 class PostList(ListView):
+    """connects Comment to ListView function """
     model = Post
     queryset = Post.objects.filter(status=1).order_by('-created_on')
     template_name = 'roadtrips.html'
@@ -16,7 +17,7 @@ class PostList(ListView):
 
 
 class PostDetail(View):
-
+    """connects Post to View function """
     def get(self, request, pk, *args, **kwards):
         # status=1 to get only published posts
         queryset = Post.objects.filter(status=1)
@@ -50,7 +51,7 @@ class PostDetail(View):
 
         if comment_form.is_valid():
             comment_form.instance.email = request.user.email
-            comment_form.instance.name = request.user
+            comment_form.instance.name = request.user.username
             comment = comment_form.save(commit=False)
             comment.post = post
             comment.save()
@@ -71,12 +72,13 @@ class PostDetail(View):
 
 
 def form_valid(self, form):
-    """ validate form and connect to user """
+    """ validates form and connects to user """
     comment_form.instance.created_by = self.request.user
     return super().form_valid(form)
 
 
 class CommentDelete(DeleteView):
+    """connects Comment to DeleteView function """
     model = Comment
     template_name = 'comment_delete.html'
     context_object_name = 'comment'
@@ -85,11 +87,11 @@ class CommentDelete(DeleteView):
         """ Success url return to blogpost in question """
         self.success_url = f'/{self.get_object().post.slug}'
         self.slug = self.get_object().post.slug
-        return reverse_lazy('post_detail', args=[post.pk])
+        return reverse_lazy('post_detail', args=[self.slug])
 
 
 class PostLike(View):
-
+    """connects PostLike to View function """
     def post(self, request, slug):
         post = get_object_or_404(Post, slug=slug)
         if post.likes.filter(id=request.user.id).exists():
@@ -100,18 +102,21 @@ class PostLike(View):
 
 
 class PostCreate(CreateView):
+    """connects Comment to CreateView function """
     model = Post
     form_class = PostForm
     template_name = 'post_form.html'
 
 
 class PostUpdate(UpdateView):
+    """connects Post to UpdateView function """
     model = Post
     form_class = PostForm
     template_name = 'post_update.html'
 
 
 class PostDelete(DeleteView):
+    """connects Post to DeleteView function """
     model = Post
     form_class = PostForm
     template_name = 'post_delete.html'
