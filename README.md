@@ -130,6 +130,22 @@ Instructions:
     - `git add .`: adds **ALL** modified files to staging area
     - `git commit -m "A message explaining what you are committing"`: commits changes to a local repository.
     - `git push`: pushes all committed changes to the subject Github repository.
+
+### Heroku
+
+To deploy my project, I followed the steps offered by the Code Institute tutorial and the [Django Blog Cheatsheet](https://codeinstitute.s3.amazonaws.com/fst/Django%20Blog%20Cheat%20Sheet%20v1.pdf).
+
+- In the Gitpod CLI use `pip3 freeze --local requirements.txt` to create the relevant files needed for Heroku to succesfully install your project dependencies. 
+- **Important**: `requirements.txt` and `env.py` should be in the `.gitignore` file to prevent the files from being committed. The env.py holds the secret key and important links that should not be compromised.
+- In addition, you need a `Procfile` as this will specify the commands that are carried out by the app on startup.
+
+Instructions: 
+1. Go to [Heroku.com](https://dashboard.heroku.com/apps) and log in. You cannot do the following steps without an account. 
+2. Click `New` and select `Create New App`.
+3. Give your project a unique name. You will be prompted to change it if it is not.
+4. Select the region you are in (e.g. mine is EU).
+
+
 --- 
 ## Credits
 --- 
