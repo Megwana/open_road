@@ -114,6 +114,10 @@ I chose a dark green colour to offer a nature theme to the site as road trips ar
 The Layout has changed on the home page due to the following:
 I wanted to add a comment model to delete comments, I was having some trouble so I seeked help from Tutor support. I was advised to restart the databased and continue fom there. After succesfully transferring the db. My bootstrap and summernote was half showing, half not. I changed bootstrap 4 to 5 to fix the bootstrap issue. But code for the bootstrap 4 layout was no longer viable. 
 
+Please see attached Data Schema:
+
+![data schema](https://1drv.ms/i/s!AmAU40Ai2GROhwf7nA-FXsepnVP6)
+
 ---
 ## Features
 ### Home Page
