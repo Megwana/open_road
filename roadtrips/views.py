@@ -39,6 +39,7 @@ class PostDetail(View):
             },
         )
 
+    """Displays the comment section on the PostDetail View Page"""
     def post(self, request, pk, *args, **kwards):
         queryset = Post.objects.filter(status=1)
         post = get_object_or_404(queryset, pk=pk)
@@ -75,19 +76,6 @@ def form_valid(self, form):
     """ validates form and connects to user """
     comment_form.instance.created_by = self.request.user
     return super().form_valid(form)
-
-
-# class CommentDelete(DeleteView):
-#     """connects Comment to DeleteView function """
-#     model = Comment
-#     template_name = 'comment_delete.html'
-#     context_object_name = 'comment'
-
-#     def get_success_url(self, *args):
-#         """ Success url return to blogpost in question """
-#         self.success_url = f'/{self.get_object().post.slug}'
-#         self.slug = self.get_object().post.slug
-#         return reverse_lazy('post_detail', args=[self.slug])
 
 
 class PostLike(View):
