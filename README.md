@@ -192,6 +192,10 @@ Once logged in, users with log ins are able to like posts.
     - I have used ElephantSQL a PostgreSQL relational database in deployment to store the data for my models.
 - [Grammarly](https://www.grammarly.com)
    - I have used Grammarly to check my spelling and grammar. 
+- [Bootstrap](https://getbootstrap.com/)
+   - I used this for the styling of the page.
+- [Cloudinary](https://cloudinary.com/)
+   - I have used cloudinary to story my images seen running on the website. 
 
 ## Testing
 
