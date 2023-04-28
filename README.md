@@ -106,48 +106,61 @@ I wanted to add a comment model to delete comments, I was having some trouble so
 ---
 ## Features
 ### Home Page
-![home page](https://1drv.ms/i/s!AmAU40Ai2GROhnQdXP8KSgiWsjsm)
-Navigation Bar: The nav bar has links to all the active pages. This allows the user to clearly identify each option and navigate to where they want. 
+![home page](https://1drv.ms/i/s!AmAU40Ai2GROhnQdXP8KSgiWsjsm) Home Page
 
+![NavBar](https://1drv.ms/f/s!AmAU40Ai2GROhnOso_L8flCTVH_m)Navigation Bar: The nav bar has links to all the active pages. This allows the user to clearly identify each option and navigate to where they want. 
+
+![Hamburger](https://1drv.ms/i/s!AmAU40Ai2GROhngHedK3ftxL_Xjb)
 The Nav bar is fully responsive and collapses on mobile devices to a hamburger icon. This allows the user to easily access the navigation links without the hassle of pressing back buttons on the browser. Or struggling to read small text along the bar. 
 
-Links to road trips - This offers a second option to the user in case they are scrolling on the home page initially and decide they want to view posts. 
+![LoggedInNav](https://1drv.ms/i/s!AmAU40Ai2GROhntafiJJ1UST5Zy3) ![LoggedOutNav](https://1drv.ms/i/s!AmAU40Ai2GROhnmdx6S5a5KihmIQ)
+Navbar difference depending on whether the user is logged in or not. 
 
-About information - this opens into a modal and offers the user a brief summary of the site on the home page. 
+![ReadMore](https://1drv.ms/i/s!AmAU40Ai2GROhnZ2UvApc-iLNQVG)
+Links to road trips - This offers a second option to the user in case they are scrolling on the home page initially and decide they want to view posts. 
 
 ### Road trips
 
+![Post Detail](https://1drv.ms/i/s!AmAU40Ai2GROhn9dDBrDQwtpfLzE)
 Site users are able to view blog posts from people's road trips around the USA.
 
+![Roadtrips Edit and Delete](https://1drv.ms/i/s!AmAU40Ai2GROhwCKVSWDJwkpb3AQ)
 If the user is logged in, they are able to view `Edit` and `Delete` buttons for posts they have published. Otherwise they are not able to do so with others posts.
 
 ### Post Detail
 
+![ViewPost](https://1drv.ms/i/s!AmAU40Ai2GROhn9dDBrDQwtpfLzE)
 Here the user is able to view the blog post in full detail and comment if they wish to share an opinion or feeback. 
 
+![Edit & Delete](https://1drv.ms/i/s!AmAU40Ai2GROhn9dDBrDQwtpfLzE)
 If the user is logged in, they are able to view `Edit` and `Delete` buttons for posts they have published. Otherwise they are not able to do so with others posts.
 
 ### Add Road trips
 
+![Create](https://1drv.ms/i/s!AmAU40Ai2GROhnrE5GJdpHJbOafT)
 Once logged in, users with log ins are able to add their own blog experiences. 
+All posts must be approved by the admin before being published. When added the post is defaulted to a draft until approved.
 
 ### Edit Road trips
 
-Once logged in, users with log ins are able to add their own blog experiences. 
+![Edit](https://1drv.ms/i/s!AmAU40Ai2GROhwQ0FNT6P3vmq-BO)
+Once logged in, users with log ins are able to edit their own blog experiences. 
 
 ### Delete Road trips
 
-Once logged in, users with log ins are able to add their own blog experiences. 
+![Delete](https://1drv.ms/i/s!AmAU40Ai2GROhwEr-f4z7X7kvg5a)
+Once logged in, users with log ins are able to delete their own blog posts. 
 
+![Comment](https://1drv.ms/i/s!AmAU40Ai2GROhwW86wQ92eRZsa_W)
 ### Comment on posts
 
 Once logged in, users with log ins are able to leave comments on travel posts.
 
 ### Like a post
 
+![Like](https://1drv.ms/i/s!AmAU40Ai2GROhwZ37wSG3O2PMdwS)
 Once logged in, users with log ins are able to like posts.
 
-### Footer
 ---
 ## Technologies Used
 ### Languages 
@@ -169,7 +182,7 @@ Once logged in, users with log ins are able to like posts.
     - Used to store code for the project once pushed.
 - [Pep8](http://pep8online.com/)
     - Used to test code for any issues/errors.
- [W3C Markup Validation Service](https://validator.w3.org/) 
+- [W3C Markup Validation Service](https://validator.w3.org/) 
     - Used to validate HTML code written and used for this webpage.
 - [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/#validate_by_input)
     - Used to validate CSS code written and used for this webpage.
@@ -177,11 +190,13 @@ Once logged in, users with log ins are able to like posts.
     - Used to validate JS code.
 - [PostgresSQL/ElephantSQL](https://www.elephantsql.com/)
     - I have used ElephantSQL a PostgreSQL relational database in deployment to store the data for my models.
-- []()
+- [Grammarly](https://www.grammarly.com)
+   - I have used Grammarly to check my spelling and grammar. 
 
 ## Testing
-### Code Validation
-### Automated Testing
+
+- I have tested the CRUD Functionabilty of this site which works both in Django Admin and on the site for users who wish to carry out CRUD actions on their post.
+Or Add a comment/like to a post. 
 
 I have used the Coverage library to carry out my Automated Testing. 
 
@@ -234,6 +249,7 @@ You need to set your Environment Variable to essure your application deploys suc
  - SECRET_KEY - to be set to your chosen key
 - CLOUDINARY_URL - to be set to your Cloudinary API environment variable
 - PORT = 8000
+- COLLECTSTATIC = 1
 
 Heroku Deployment:
 - Click Deploy tab
@@ -251,6 +267,7 @@ Please see the following links I have used to fix bugs, learn from or tackle pro
 - [Django W3schools](https://www.w3schools.com/django/)
 - [Codemy](Codemy.com)
 - [Stackoverflow](https://stackoverflow.com/)
+- [Code Institute](https://learn.codeinstitute.net/)
 
 ## Acknowledgments
 
