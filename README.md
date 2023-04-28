@@ -1,6 +1,5 @@
 # Open Road
 ---
-
 ## Table of Contents
 ---
 - [User Experience (UX)](#user-experience-ux)
@@ -101,10 +100,13 @@ The theme is supposed to be clean cut and simple, offering the simplicity that i
 [Wireframes can be viewed here](https://share.balsamiq.com/c/jFLAg5a7apUrV86ucTo7tU.png)
 
 I chose a dark green colour to offer a nature theme to the site as road trips around the USA are heavily influence by the immersive experience in the great unknown. 
+The Layout has changed on the home page due to the following:
+I wanted to add a comment model to delete comments, I was having some trouble so I seeked help from Tutor support. I was advised to restart the databased and continue fom there. After succesfully transferring the db. My bootstrap and summernote was half showing, half not. I changed bootstrap 4 to 5 to fix the bootstrap issue. But code for the bootstrap 4 layout was no longer viable. 
+
 ---
 ## Features
 ### Home Page
-
+![home page](https://1drv.ms/i/s!AmAU40Ai2GROhnQdXP8KSgiWsjsm)
 Navigation Bar: The nav bar has links to all the active pages. This allows the user to clearly identify each option and navigate to where they want. 
 
 The Nav bar is fully responsive and collapses on mobile devices to a hamburger icon. This allows the user to easily access the navigation links without the hassle of pressing back buttons on the browser. Or struggling to read small text along the bar. 
@@ -246,6 +248,9 @@ Heroku Deployment:
 --- 
 Please see the following links I have used to fix bugs, learn from or tackle problems:
 
+- [Django W3schools](https://www.w3schools.com/django/)
+- [Codemy](Codemy.com)
+- [Stackoverflow](https://stackoverflow.com/)
 
 ## Acknowledgments
 
