@@ -1,4 +1,4 @@
-# OpenRoad USA
+# Open Road
 ---
 
 ## Table of Contents
@@ -51,25 +51,100 @@ Due to the site being able towards a younger audience who often browse on mobile
 
 ### User Stories
 
+Please find all my user stories & acceptance criteria in greater detail [here]()
+
+- USER STORY: Manage posts.
+- USER STORY: Manage/create Categories.
+- USER STORY: Site Pagination.
+- USER STORY: Open a post.
+- USER STORY: Basic website layout with Navbar/footer.
+- USER STORY: User can clear view Logged in status.
+- USER STORY: Like a post.
+- USER STORY: View road trip posts list
+- USER STORY: Remind user to register for an account if they do not have one. 
+- USER STORY: Scroll to the Top Button on home page.
+- USER STORY: Comment on a post. 
+- USER STORY: Intuitive sit navigation.
+- USER STORY: All road trips must have a description, suggested travel length.
+- USER STORY: Accout Registration.
+- USER STORY: Informative landing page.
 
 ### Scope
 
 To achieve both user and business goals, I will include the following features:
 
+- A responsive navbar that allows users to navigate through various pages on the site.
+- A Landing page providing a brief summary about Open Road and links to trips posts and login/ registration options.
+- Road Trip Post page, with Card displaying the different posts from users shared.
+- Add Road Trip page, allowing logged in users to share their experience.
+- Post detail page, users can click on a post from road trip page that they are interested in and read the full post. 
+- Edit Post page: If a user is logged in, there shows an Edit Button on both the road trip page and post detail page. This will take them to the edit page where they can make alterations to their post. 
+- Delete Post Page: If a user is logged in, there shows a Delete Button on both the road trip page and post detail page. This will take them to the delete page where they can make alterations to their post.
+- Register/ login and sign out feature using Django allauth.
+
 ### Structure
-The design of website is made to be clean cut and simple. This is to offer key information quick and locate what is desired rather than reading unessary information. 
+
+The design of website is made to be clean cut and simple. This is to offer key information quick and locate what is desired rather than reading unessary information.
+
+The website is made of two apps:
+- Website: offers core functionality
+- roadtrip: display posts and blog post data
 
 App structure:
 
 #### Skeleton
 
+Please note, the website differs slightly from the original wireframes.
+
+The theme is supposed to be clean cut and simple, offering the simplicity that is a humbling road trip journey. I have used bootstrap to create styling and design to my website. 
+
 [Wireframes can be viewed here](https://share.balsamiq.com/c/jFLAg5a7apUrV86ucTo7tU.png)
+
+I chose a dark green colour to offer a nature theme to the site as road trips around the USA are heavily influence by the immersive experience in the great unknown. 
 ---
 ## Features
 ### Home Page
+
+Navigation Bar: The nav bar has links to all the active pages. This allows the user to clearly identify each option and navigate to where they want. 
+
+The Nav bar is fully responsive and collapses on mobile devices to a hamburger icon. This allows the user to easily access the navigation links without the hassle of pressing back buttons on the browser. Or struggling to read small text along the bar. 
+
+Links to road trips - This offers a second option to the user in case they are scrolling on the home page initially and decide they want to view posts. 
+
+About information - this opens into a modal and offers the user a brief summary of the site on the home page. 
+
 ### Road trips
-### pending
-### Contact Form
+
+Site users are able to view blog posts from people's road trips around the USA.
+
+If the user is logged in, they are able to view `Edit` and `Delete` buttons for posts they have published. Otherwise they are not able to do so with others posts.
+
+### Post Detail
+
+Here the user is able to view the blog post in full detail and comment if they wish to share an opinion or feeback. 
+
+If the user is logged in, they are able to view `Edit` and `Delete` buttons for posts they have published. Otherwise they are not able to do so with others posts.
+
+### Add Road trips
+
+Once logged in, users with log ins are able to add their own blog experiences. 
+
+### Edit Road trips
+
+Once logged in, users with log ins are able to add their own blog experiences. 
+
+### Delete Road trips
+
+Once logged in, users with log ins are able to add their own blog experiences. 
+
+### Comment on posts
+
+Once logged in, users with log ins are able to leave comments on travel posts.
+
+### Like a post
+
+Once logged in, users with log ins are able to like posts.
+
 ### Footer
 ---
 ## Technologies Used
@@ -85,9 +160,7 @@ App structure:
 ### Tools 
 
 - [Image Color Picker](https://imagecolorpicker.com/color-code/20442c)
-
 - [Balsamiq](https://balsamiq.com/wireframes/?gclid=CjwKCAjw8-OhBhB5EiwADyoY1eL0Yyb7LjlqjLVuM9xfXLRdmzK9m1CxpreaZIzIzxFIs8Oms8CNSBoCPagQAvD_BwE)
-
 - [Font Awesome](https://fontawesome.com/)
     - Used for the icons in the website.
 - [GitHub](https://github.com/)
@@ -103,14 +176,19 @@ App structure:
 - [PostgresSQL/ElephantSQL](https://www.elephantsql.com/)
     - I have used ElephantSQL a PostgreSQL relational database in deployment to store the data for my models.
 - []()
-- []()
-- []()
-- []()
-
 
 ## Testing
 ### Code Validation
 ### Automated Testing
+
+I have used the Coverage library to carry out my Automated Testing. 
+
+To generate your own coverage report from the command line:
+1. Install the package using the command `pip3 install coverage`.
+2. Run coverage run manage.py test.
+3. Run `coverage html` to generate the report.
+4. To access the report via the browser, use the command `python3 -m http.server` and open `index.html` file from inside `htmlcov` folder, that will appear. 
+
 ### Manual Testing
 ### Bugs and Fixes
 --- 
@@ -166,5 +244,9 @@ Heroku Deployment:
 --- 
 ## Credits
 --- 
+Please see the following links I have used to fix bugs, learn from or tackle problems:
+
+
 ## Acknowledgments
+
 I would like to thank my course mentor Akshat Garg for his guidance and support in our sessions. 
