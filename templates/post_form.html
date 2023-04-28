@@ -24,8 +24,8 @@
             </form>
         </div>
         <script>
-            var name = "{{ user }}";
-            document.getElementById("megan").placeholder = name;
+            var name = "{{ user.id }}";
+            document.getElementById("hide-author").value = name;
         </script>
     </section>
 {% endblock %}
