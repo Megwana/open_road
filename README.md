@@ -69,15 +69,15 @@ Please find all my user stories & acceptance criteria in greater detail [here]()
 | # | Feature | Importance | Viability |
 | --- | --- | --- | --- |
 | 1 | View Road Trips | 5 | 5 |
-| 2 | View and Create Trip Notes | 5 | 5 |
-| 3 | Edit and Delete Trip Notes | 4 | 3 |
+| 2 | View and Create Trip Posts | 5 | 5 |
+| 3 | Edit and Delete Trip Posts | 4 | 3 |
 | 4 | Create, Edit and Delete Account | 4 | 3 |
 | 5 | Login and Logout to Account | 5 | 5 |
-| 6 | Moderate Content posted by Account Users | 4 | 1 |
+| 6 | Moderate Content posted by Account Users | 4 | 3 |
 | 7 | Receive Notifications on users activities | 2 | 2 |
-| 8 | Search Different Road Trips | 3 | 1 |
-| 9 | Share Road trips on Social Media | 2 | 3 |
-| 10 | Show alert messages to communicate Log Authentication to user  | 4 | 5 |
+| 8 | Search Different Road Trips based on Category | 3 | 1 |
+| 9 | Delete Comments | 2 | 3 |
+| 10 | Show alert messages to communicate Log Authentication to user  | 4 | 4 |
 
 ### Scope
 
