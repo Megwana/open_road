@@ -1,5 +1,7 @@
 # Open Road
 ---
+Introduction: This repository is also based off of another repository I created, called 'OpenRoad' but this used Flask and SQLAlchemy.
+
 ## Table of Contents
 ---
 - [User Experience (UX)](#user-experience-ux)
@@ -10,8 +12,6 @@
 - [Features](#features)
     * [Home Page](#home-page)
     * [Road Trips](#road-trips)
-    * [Contact Form](#contact-form)
-    * [Footer](#footer)
 - [Technologies Used](#technologies-used)
 - [Testing](#testing)
     * [Code Validation](#code-validation)
@@ -19,8 +19,6 @@
     * [Automated Testing](#automated-testing)
     * [Bugs and Fixes](#bugs-and-fixes)
 - [Deployment](#deployment)
-    * []()
-    * []()
 - [Credits](#credits)
 - [Acknowledgments](#acknowledgments)
 
@@ -67,6 +65,19 @@ Please find all my user stories & acceptance criteria in greater detail [here]()
 - USER STORY: All road trips must have a description, suggested travel length.
 - USER STORY: Accout Registration.
 - USER STORY: Informative landing page.
+
+| # | Feature | Importance | Viability |
+| --- | --- | --- | --- |
+| 1 | View Road Trips | 5 | 5 |
+| 2 | View and Create Trip Notes | 5 | 5 |
+| 3 | Edit and Delete Trip Notes | 4 | 3 |
+| 4 | Create, Edit and Delete Account | 4 | 3 |
+| 5 | Login and Logout to Account | 5 | 5 |
+| 6 | Moderate Content posted by Account Users | 4 | 1 |
+| 7 | Receive Notifications on users activities | 2 | 2 |
+| 8 | Search Different Road Trips | 3 | 1 |
+| 9 | Share Road trips on Social Media | 2 | 3 |
+| 10 | Show alert messages to communicate Log Authentication to user  | 4 | 5 |
 
 ### Scope
 
