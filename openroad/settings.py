@@ -21,7 +21,7 @@ DEBUG = False
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
-ALLOWED_HOSTS = ['openroad.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['openroadd.herokuapp.com', 'localhost']
 
 
 # Application definition

@@ -1,4 +1,4 @@
-/* styling for base.html */
+styling for base.html
 
 .logo a {
     text-decoration: none;
@@ -38,7 +38,7 @@ a, a:hover {
     margin: 0;
 }
 
-/* styling for home.html */
+styling for home.html
 
 .img-fluid {
     background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5));
@@ -167,5 +167,5 @@ hr {
 .deny_create, .deny_update {
     justify-content: center;
     text-align: center;
-}
+} */
 
