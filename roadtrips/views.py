@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
 from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib import messages
 from django.http import HttpResponseRedirect
 from django.urls import reverse_lazy
 from .models import Post, Category, Comment
@@ -95,12 +96,21 @@ class PostCreate(CreateView):
     form_class = PostForm
     template_name = 'post_form.html'
 
+    def form_valid(self, form):
+        response = super().form_valid(form)
+        messages.success(self.request, 'Your post has been successfully created.')
+        return response
 
 class PostUpdate(UpdateView):
     """connects Post to UpdateView function """
     model = Post
     form_class = PostForm
     template_name = 'post_update.html'
+
+    def form_valid(self, form):
+        response = super().form_valid(form)
+        messages.success(self.request, 'Your post has been successfully updated.')
+        return response
 
 
 class PostDelete(DeleteView):
@@ -109,3 +119,8 @@ class PostDelete(DeleteView):
     form_class = PostForm
     template_name = 'post_delete.html'
     success_url = reverse_lazy('home')
+
+    def delete(self, request, *args, **kwargs):
+        response = super().delete(request, *args, **kwargs)
+        messages.success(self.request, 'Your post has been successfully deleted.')
+        return response
