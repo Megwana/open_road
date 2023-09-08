@@ -16,6 +16,7 @@ View DEPLOYMENT Link [here](https://openroadd.herokuapp.com)
 - [Features](#features)
     * [Home Page](#home-page)
     * [Road Trips](#road-trips)
+    * [CRUD Notifications](#crud-notifications)
 - [Technologies Used](#technologies-used)
 - [Testing](#testing)
     * [Code Validation](#code-validation)
@@ -179,6 +180,18 @@ Once logged in, users with log ins are able to leave comments on travel posts.
 
 ![Like](https://1drv.ms/i/s!AmAU40Ai2GROhwZ37wSG3O2PMdwS)
 Once logged in, users with log ins are able to like posts.
+
+### CRUD Notifications
+
+- Login
+- Logout
+- Register
+- Create Post
+- Edit Post
+- Delete Post
+- Comment on Post
+- Like a Post
+- Unlike a Post
 
 ---
 ## Technologies Used
