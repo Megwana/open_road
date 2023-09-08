@@ -41,8 +41,9 @@ INSTALLED_APPS = [
     'cloudinary_storage',
     'django.contrib.staticfiles',
     'cloudinary',
-    "django_bootstrap5",
+    'django_bootstrap5',
     'crispy_forms',
+    "crispy_bootstrap5",
     'website',
     'roadtrips',
 ]
@@ -61,7 +62,9 @@ MESSAGE_TAGS = {
     messages.ERROR: 'alert-danger',
 }
 
-CRISPY_TEMPLATES = 'django_bootstrap5'
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+CRISPY_TEMPLATE_PACK = "bootstrap5"
 SUMMERNOTE_THEME = 'bs5'
 
 MIDDLEWARE = [

@@ -292,6 +292,8 @@ Please see the following links I have used to fix bugs, learn from or tackle pro
 - [Stackoverflow](https://stackoverflow.com/)
 - [Code Institute](https://learn.codeinstitute.net/)
 
+- [Documents regarding crispy and bootstrap5](https://pypi.org/project/crispy-bootstrap5/)
+
 ## Acknowledgments
 
 I would like to thank my course mentor Akshat Garg for his guidance and support in our sessions. 
