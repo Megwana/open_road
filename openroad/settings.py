@@ -21,8 +21,10 @@ DEBUG = True
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
-ALLOWED_HOSTS = ['openroadd.herokuapp.com', '8000-megwana-openroad-9zrxkgpcijd.ws-eu104.gitpod.io']
-
+ALLOWED_HOSTS = [
+    'openroadd.herokuapp.com',
+    '8000-megwana-openroad-9zrxkgpcijd.ws-eu104.gitpod.io'
+]
 
 # Application definition
 
