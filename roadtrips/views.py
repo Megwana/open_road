@@ -64,7 +64,7 @@ class PostDetail(View):
         else:
             messages.error(
                 request,
-                'Failed to add comment. Please check your input.'
+                'Failed to add comment. Please enter valid input.'
             )
 
         return render(
@@ -90,8 +90,10 @@ class PostLike(View):
         post = get_object_or_404(Post, slug=slug)
         if post.likes.filter(id=request.user.id).exists():
             post.likes.remove(request.user)
+            messages.success(request, 'Like successfully removed!')
         else:
             post.likes.add(request.user)
+            messages.success(request, 'Like successfully added!')
         return HttpResponseRedirect(
             reverse_lazy('post_detail', args=[post.pk])
         )
