@@ -58,6 +58,11 @@ class PostDetail(View):
             comment.post = post
             comment.save()
             messages.success(request, 'Comment added successfully!')
+        else:
+            messages.error(
+                request,
+                'Failed to add comment. Please check your input.'
+            )
 
         return render(
             request,
@@ -99,9 +104,12 @@ class PostCreate(CreateView):
 
     def form_valid(self, form):
         """Overrides form_valid to add a success message."""
-        response = super().form_valid(form)
-        messages.success(self.request, 'Post created successfully!')
-        return response
+        try:
+            response = super().form_valid(form)
+            messages.success(self.request, 'Post created successfully!')
+            return response
+        except Exception as e:
+            messages.error(self.request, f"Failed to create post. Error: {e}")
 
 
 class PostUpdate(UpdateView):
@@ -115,9 +123,12 @@ class PostUpdate(UpdateView):
 
     def form_valid(self, form):
         """Overrides form_valid to add a success message."""
-        response = super().form_valid(form)
-        messages.success(self.request, 'Post updated successfully!')
-        return response
+        try:
+            response = super().form_valid(form)
+            messages.success(self.request, 'Post updated successfully!')
+            return response
+        except Exception as e:
+            messages.error(self.request, f"Failed to update post. Error: {e}")
 
 
 class PostDelete(DeleteView):
@@ -131,6 +142,12 @@ class PostDelete(DeleteView):
 
     def delete(self, request, *args, **kwargs):
         """Overrides delete to add a success message."""
-        response = super().delete(request, *args, **kwargs)
-        messages.success(self.request, 'Post deleted successfully!')
-        return response
+        try:
+            response = super().delete(request, *args, **kwargs)
+            messages.success(self.request, 'Post deleted successfully!')
+            return response
+        except Exception as e:
+            messages.error(self.request, f"Failed to delete post. Error: {e}")
+            return HttpResponseRedirect(
+                self.success_url
+            )  # redirect back to the same page
