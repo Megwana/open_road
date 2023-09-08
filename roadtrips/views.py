@@ -57,7 +57,10 @@ class PostDetail(View):
             comment = comment_form.save(commit=False)
             comment.post = post
             comment.save()
-            messages.success(request, 'Comment added successfully!')
+            messages.success(
+                request,
+                'Comment added successfully and waiting for admin approval!'
+                )
         else:
             messages.error(
                 request,
