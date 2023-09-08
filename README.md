@@ -183,8 +183,8 @@ Once logged in, users with log ins are able to like posts.
 ---
 ## Technologies Used
 ### Languages 
-- HTML
-- CSS
+- [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
+- [CSS](https://www.w3.org/Style/CSS/Overview.en.html#:~:text=Cascading%20Style%20Sheets%20(CSS)%20is,from%20the%20CSS%20working%20group.)
 - JavaScript
 - [Python](https://www.python.org/)
     - Python used to write all of the code in this application that makes it fully functional.
@@ -211,10 +211,23 @@ Once logged in, users with log ins are able to like posts.
     - I have used ElephantSQL a PostgreSQL relational database in deployment to store the data for my models.
 - [Grammarly](https://www.grammarly.com)
    - I have used Grammarly to check my spelling and grammar. 
-- [Bootstrap](https://getbootstrap.com/)
-   - I used this for the styling of the page.
 - [Cloudinary](https://cloudinary.com/)
-   - I have used cloudinary to story my images seen running on the website. 
+   - I have used cloudinary to story my images seen running on the website.
+- [Gunicorn](https://gunicorn.org/)
+    - Python WSGI HTTP server.
+- [Psychopg 2](https://pypi.org/project/psycopg2/)
+    - Python PostgreSQL adapater.
+- [dj-database-url](https://pypi.org/project/dj-database-url/)
+    - Django utility to create an environment variable to configure the Django application.
+- [Django-allauth](https://allauth.org/)
+    - User account management django application suite.
+- [Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/)
+    - Django app to simplify form rendering.
+- [Crispy Bootstrap 5](https://pypi.org/project/crispy-bootstrap5/)
+    - Bootstrap 5 templates for Crispy Forms.
+- [Bootstrap 5](https://getbootstrap.com/)
+   - I used this for the styling of the front end.
+
 
 ## Testing
 
@@ -230,6 +243,21 @@ To generate your own coverage report from the command line:
 4. To access the report via the browser, use the command `python3 -m http.server` and open `index.html` file from inside `htmlcov` folder, that will appear. 
 
 ### Manual Testing
+
+
+
+### Automated Testing
+
+
+
+### Validator Testing
+
+W3C HTML Validator
+W3C CSS Validator
+JSHint JavaScript validator
+Python validation
+Lighthouse testing
+
 ### Bugs and Fixes
 --- 
 ## Deployment 
@@ -291,8 +319,6 @@ Please see the following links I have used to fix bugs, learn from or tackle pro
 - [Codemy](Codemy.com)
 - [Stackoverflow](https://stackoverflow.com/)
 - [Code Institute](https://learn.codeinstitute.net/)
-
-- [Documents regarding crispy and bootstrap5](https://pypi.org/project/crispy-bootstrap5/)
 
 ## Acknowledgments
 
