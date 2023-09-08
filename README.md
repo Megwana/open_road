@@ -2,7 +2,7 @@
 ---
 Introduction: This repository is also based off of another repository I created, called 'OpenRoad' but this used Flask and SQLAlchemy.
 
-[Am I Responsive VIew](/static/images/amiresponsive.png)
+![Am I Responsive VIew](/static/images/amiresponsive.png)
 
 View DEPLOYMENT Link [here](https://openroadd.herokuapp.com)
 
