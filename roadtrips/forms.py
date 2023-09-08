@@ -4,6 +4,7 @@ from django import forms
 
 choices = Category.objects.all().values_list('name', 'name')
 
+
 class PostForm(forms.ModelForm):
     class Meta:
         model = Post

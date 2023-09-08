@@ -2,21 +2,10 @@
 {% block title %} Add New Roadtrip {% endblock %}
 {% load crispy_forms_tags %}
 {% block content %}
-<!-- <div>
-    {% if posted %}
-        <div class="alert alert-success" role="alert">
-            Thank you for submitting! Your Roadtrip post is awaiting approval.
-        </div>
-    {% else %}
-        <div class="alert alert-danger" role="alert">
-            I'm sorry, there was an issue submitting your form. Please try again.
-        </div>
-    {% endif %}
-</div> -->
     <section class="container py-5 px-4">
         <h1>Add Roadtrip Post</h1>
         <div class="form-group">
-            <form method="POST">
+            <form method="POST" enctype="multipart/form-data">
                 {% csrf_token %}
                 {{  form.as_p }}
                 <button class="btn btn-outline-dark" type="submit">Submit Post</button>
