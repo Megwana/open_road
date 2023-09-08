@@ -59,7 +59,7 @@ class PostDetail(View):
             comment.save()
             messages.success(
                 request,
-                'Comment added successfully and waiting for admin approval!'
+                'Comment added successfully. Waiting for approval!'
                 )
         else:
             messages.error(
@@ -111,7 +111,10 @@ class PostCreate(CreateView):
         """Overrides form_valid to add a success message."""
         try:
             response = super().form_valid(form)
-            messages.success(self.request, 'Post created successfully!')
+            messages.success(
+                self.request,
+                'Post created successfully. Waiting for approval!'
+                )
             return response
         except Exception as e:
             messages.error(self.request, f"Failed to create post. Error: {e}")
