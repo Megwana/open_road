@@ -24,18 +24,13 @@ class PostFormTest(TestCase):
 
         self.assertTrue(form.is_valid())
 
-    def test_post_form_missing_title(self):
-        category = Category.objects.create(name="Sample Category")
-        user = User.objects.create_user(username='testuser', password='123456')
-
-        form = PostForm(data={
-            'author': user.id,
-            'excerpt': 'Test excerpt',
-            'category': category.id,
-            'featured_image': 'some_image.jpg',
-            'content': 'Test content',
-        })
+    def test_post_form_all_fields_required(self):
+        form = PostForm(data={})
 
         self.assertFalse(form.is_valid())
-        # Ensure 'title' field is in form errors
-        self.assertIn('title', form.errors)
+
+        # List the required fields here
+        required_fields = ['title', 'author', 'category', 'content']
+
+        for field in required_fields:
+            self.assertIn(field, form.errors)
