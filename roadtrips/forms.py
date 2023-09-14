@@ -7,8 +7,6 @@ choices in the PostForm.
 from .models import Comment, Post, Category
 from django import forms
 
-choices = Category.objects.all().values_list('name', 'name')
-
 
 class PostForm(forms.ModelForm):
     """
@@ -16,6 +14,18 @@ class PostForm(forms.ModelForm):
     The form is designed with specific widgets and attributes to enhance
     user experience and collect the required information for the Post model.
     """
+    class PostForm(forms.ModelForm):
+        category = forms.ChoiceField(
+            widget=forms.Select(attrs={'class': 'form-control'})
+        )
+
+    def __init__(self, *args, **kwargs):
+        super(PostForm, self).__init__(*args, **kwargs)
+        self.fields['category'].choices = (
+            # Fetch ID, Name pairs
+            [(cat.id, cat.name) for cat in Category.objects.all()]
+        )
+
     class Meta:
         model = Post
         fields = [
@@ -33,11 +43,11 @@ class PostForm(forms.ModelForm):
                 'id': 'hide-author',
                 'type': 'hidden'
             }),
-            # Dropdown selection for post category.
-            'category': forms.Select(
-                choices=choices,
-                attrs={'class': 'form-control'}
-            ),
+            # # Dropdown selection for post category.
+            # 'category': forms.Select(
+            #     choices=choices,
+            #     attrs={'class': 'form-control'}
+            # ),
             # File input for uploading an image.
             'featured_image': forms.FileInput(
                 attrs={'class': 'form-control-file'}
