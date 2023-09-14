@@ -28,8 +28,13 @@ class PostForm(forms.ModelForm):
 
     def clean_title(self):
         title = self.cleaned_data.get('title')
-        if title and title.isnumeric():
-            raise forms.ValidationError("Title cannot be exclusively numbers.")
+        if title and (
+            title.isnumeric() or not any(c.isalpha() for c in title)
+        ):
+            raise forms.ValidationError(
+                "Title cannot be exclusively numbers or "
+                "non-alphanumeric characters."
+                )
         return title
 
     class Meta:

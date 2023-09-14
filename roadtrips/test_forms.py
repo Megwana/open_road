@@ -26,7 +26,7 @@ class PostFormTest(TestCase):
 
     def test_post_form_invalid_data_type(self):
         form = PostForm(data={
-            'title': '123456',  # An exclusively numeric title
+            'title': '####',  # An exclusively numeric/ alphanumeric title
             'author': 'testuser',  # Send a string instead of an ID
             'excerpt': 'Test excerpt',
             'category': 'Sample Category',  # Send the name instead of the ID
