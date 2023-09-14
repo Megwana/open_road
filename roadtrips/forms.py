@@ -54,12 +54,6 @@ class PostForm(forms.ModelForm):
                 'id': 'hide-author',
                 'type': 'hidden'
             }),
-            # # Dropdown selection for post category.
-            # 'category': forms.Select(
-            #     choices=choices,
-            #     attrs={'class': 'form-control'}
-            # ),
-            # File input for uploading an image.
             'featured_image': forms.FileInput(
                 attrs={'class': 'form-control-file'}
             ),

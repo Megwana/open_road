@@ -7,14 +7,24 @@
         <div class="form-group">
             <form method="POST" enctype="multipart/form-data">
                 {% csrf_token %}
-                {{  form.as_p }}
+                {% for field in form %}
+                    <div class="form-group">
+                        {{ field.label_tag }}  <!-- Render the label -->
+                        {{ field }}  <!-- Render the field input -->
+                        {% if field.errors %}
+                        <!-- Display the first error message with Bootstrap styling -->
+                        <div class="alert alert-warning mt-2" role="alert">
+                            {{ field.errors.0 }}
+                        </div>
+                        {% endif %}
+                    </div>
+                {% endfor %}
                 <button class="btn btn-outline-dark" type="submit">Submit Post</button>
-                </div>
             </form>
         </div>
         <script>
             var name = "{{ user.id }}";
             document.getElementById("hide-author").value = name;
         </script>
-    </section>
+    </section>   
 {% endblock %}
