@@ -26,6 +26,12 @@ class PostForm(forms.ModelForm):
             [(cat.id, cat.name) for cat in Category.objects.all()]
         )
 
+    def clean_title(self):
+        title = self.cleaned_data.get('title')
+        if title and title.isnumeric():
+            raise forms.ValidationError("Title cannot be exclusively numbers.")
+        return title
+
     class Meta:
         model = Post
         fields = [
