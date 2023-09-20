@@ -71,6 +71,10 @@ Please find all my user stories & acceptance criteria in greater detail [here]()
 - USER STORY: Accout Registration.
 - USER STORY: Informative landing page.
 
+Please also see this illustrated on my Kanban Board:
+
+**LINK**
+
 | # | Feature | Importance | Viability |
 | --- | --- | --- | --- |
 | 1 | View Road Trips | 5 | 5 |
@@ -183,6 +187,8 @@ Once logged in, users with log ins are able to like posts.
 
 ### CRUD Notifications
 
+LO2 2.3 CRUD Operations below:
+
 - Login
 - Logout
 - Register
@@ -192,6 +198,11 @@ Once logged in, users with log ins are able to like posts.
 - Comment on Post
 - Like a Post
 - Unlike a Post
+
+### Error Pages
+
+- 404 (Page Not Found)
+- 500 (Internal Server Error)
 
 ---
 ## Technologies Used
@@ -257,7 +268,9 @@ To generate your own coverage report from the command line:
 
 ### Manual Testing
 
+LO4 4.2
 
+LO4 4.3 
 
 ### Automated Testing
 
