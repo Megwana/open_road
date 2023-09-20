@@ -18,6 +18,7 @@ class PostModelTest(TestCase):
             )
         self.category = Category.objects.create(name="Test Category")
 
+    # Check the creation of a post instance.
     def test_post_creation(self):
         post = Post.objects.create(
             title="Test Post",
@@ -25,3 +26,14 @@ class PostModelTest(TestCase):
             content="Test Content"
             )
         self.assertEqual(str(post), "Test Post | testuser")
+
+    # Check if unique slug is created based on the posts title.
+    def test_slug_creation(self):
+        post = Post.objects.create(
+            title="Test Post",
+            author=self.user,
+            category=self.category,
+            content="Test Content"
+            )
+        # Assert that the slug is created correctly based on the title.
+        self.assertEqual(post.slug, "test-post")
