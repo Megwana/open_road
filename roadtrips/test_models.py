@@ -50,3 +50,21 @@ class PostModelTest(TestCase):
 
         # Confirm the number of likes on the post is correct.
         self.assertEqual(post.number_of_likes(), 1)
+
+    def test_duplicate_title_error(self):
+        # Creating the first test post
+        Post.objects.create(
+            title="Test Post",
+            author=self.user,
+            category=self.category,
+            content="Test Content"
+            )
+
+        # Attempt to create 2nd post with same title should raise an error
+        with self.assertRaises(Exception):
+            Post.objects.create(
+                title="Test Post",
+                author=self.user,
+                category=self.category,
+                content="Test Content"
+                )
