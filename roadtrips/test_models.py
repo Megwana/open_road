@@ -35,5 +35,18 @@ class PostModelTest(TestCase):
             category=self.category,
             content="Test Content"
             )
-        # Assert that the slug is created correctly based on the title.
+        # Confirm the slug is created correctly based on the title.
         self.assertEqual(post.slug, "test-post")
+
+    # Check the functionality of counting likes on a post.
+    def test_like_count(self):
+        post = Post.objects.create(
+            title="Test Post",
+            author=self.user,
+            category=self.category,
+            content="Test Content"
+            )
+        post.likes.add(self.user)
+
+        # Confirm the number of likes on the post is correct.
+        self.assertEqual(post.number_of_likes(), 1)
