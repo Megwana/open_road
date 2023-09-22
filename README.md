@@ -182,27 +182,45 @@ Once logged in, users with log ins are able to leave comments on travel posts.
 
 ### Like a post
 
-![Like](https://1drv.ms/i/s!AmAU40Ai2GROhwZ37wSG3O2PMdwS)
+![Like]()
 Once logged in, users with log ins are able to like posts.
 
 ### CRUD Notifications
 
-LO2 2.3 CRUD Operations below:
+`LO2 2.3 CRUD Operations`
 
-- Login
-- Logout
-- Register
-- Create Post
-- Edit Post
+I wanted to highlight the notifications of successfull or failed CRUD operations. Please see all of the following notifications below as per LO2 2.3 Criteria:
+
+- Login: The user is notified if a username or password is incorrect. This is including case-sensitivity scenrios.
+
+![Login](https://res.cloudinary.com/dfdbnig1r/image/upload/v1695424431/CaseSensitive2jake_kdb3np.png)
+![Successfully Signed In](https://res.cloudinary.com/dfdbnig1r/image/upload/v1695424430/CaseSensitive1Jake_bgsunx.png)
+- Logout: User is notified when they have successfully signed out.
+![Logout](https://res.cloudinary.com/dfdbnig1r/image/upload/v1695424427/SignOutNotification_qdnhaj.png)
+- Create Post: The user is notified that their post has been created and waiting for approval.
+![Create Post](https://res.cloudinary.com/dfdbnig1r/image/upload/v1695424427/PostCreatedNotification_q7efq4.png)
+- Edit Post:
+![Update Post](https://res.cloudinary.com/dfdbnig1r/image/upload/v1695424428/PostUpdateNotification_n8eigq.png)
 - Delete Post
-- Comment on Post
-- Like a Post
-- Unlike a Post
+![Delete Post](https://res.cloudinary.com/dfdbnig1r/image/upload/v1695424428/PostDeletedNotification_fncahy.png)
+- Comment on Post: The user is notified when they have successfully commented and that this is waiting for approval.
+![Comment Post](https://res.cloudinary.com/dfdbnig1r/image/upload/v1695424431/CommentAdded_ud2vbt.png)
+- Like a Post: The user is notified that when they clicked like, it was successfully added to the post.
+![Like Added](https://res.cloudinary.com/dfdbnig1r/image/upload/v1695424431/LikeNotification_yjkece.png)
+- Unlike a Post: The user is notified that when they click on a post again that they have liked. It successfully removes the like. 
+![Like Removed](https://res.cloudinary.com/dfdbnig1r/image/upload/v1695424431/LikeRemoved_heskte.png)
 
 ### Error Pages
 
+The User is provided with error pages should they come across the following 404 or 500 Error message. 
+
+Please click the following links [404](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404) and [500](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/500) to read more about these error messages.
+
+On the 404 Page the user is provided with a link to redirect them back to the home page if they are lost. In addition, the Navbar tab has been maintained, so they can also navigate elsewhere on the site with ease. Including the logo which will also redirect a user back to the home page. 
 - 404 (Page Not Found)
+![404 (Page Not Found)](https://res.cloudinary.com/dfdbnig1r/image/upload/v1695424430/404Page_yjv1po.png)
 - 500 (Internal Server Error)
+![500 Internal Server Error](https://res.cloudinary.com/dfdbnig1r/image/upload/v1695424429/500Page_pi4ngn.png)
 
 ---
 ## Technologies Used
@@ -268,13 +286,11 @@ To generate your own coverage report from the command line:
 
 ### Manual Testing
 
+### Automated Testing
+
 LO4 4.2
 
 LO4 4.3 
-
-### Automated Testing
-
-
 
 ### Validator Testing
 
@@ -339,7 +355,7 @@ Heroku Deployment:
 --- 
 ## Credits
 --- 
-Please see the following links I have used to fix bugs, learn from or tackle problems:
+Please see the following links I have used to fix bugs, learn skills or tackle problems:
 
 - [Django W3schools](https://www.w3schools.com/django/)
 - [Codemy](Codemy.com)
