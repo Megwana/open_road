@@ -112,6 +112,26 @@ class PostViewTests(TestCase):
 
         self.assertEqual(response.status_code, 302)
 
+    @patch(
+        'roadtrips.views.UpdateView.form_valid',
+        side_effect=Exception('Forced Update Exception'))
+    # Check exception with error message works if post fails to update in db
+    def test_post_update_exception(self, mock_method):
+        form_data = {
+            'title': 'Updated Post',
+            'content': 'Updated Content',
+            'status': 1,
+            'author': self.user.id,
+            'category': get_default_category()
+        }
+
+        # Make a POST request to update the post
+        response = self.client.post(
+            reverse('post_update', args=[self.post.pk]), form_data)
+        error_msg = "Failed to update post. Error: Forced Update Exception"
+        messages_list = list(get_messages(response.wsgi_request))
+        self.assertIn(error_msg, str(messages_list[0]))
+
     def test_post_delete_view(self):
         response = self.client.post(
             reverse('post_delete', args=[self.post.pk]))

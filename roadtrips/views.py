@@ -138,6 +138,8 @@ class PostUpdate(UpdateView):
             return response
         except Exception as e:
             messages.error(self.request, f"Failed to update post. Error: {e}")
+            return HttpResponseRedirect(
+                reverse('post_update', args=[self.object.pk]))
 
 
 class PostDelete(DeleteView):
