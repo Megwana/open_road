@@ -17,7 +17,11 @@ class Category(models.Model):
         db_table = ''
         managed = True
         verbose_name = 'Category'
-        verbose_name_plural = 'Categorys'
+        verbose_name_plural = 'Categories'
+
+
+def get_default_category():
+    return Category.objects.get_or_create(name="Default")[0].id
 
 
 class Post(models.Model):
@@ -26,8 +30,9 @@ class Post(models.Model):
     author = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="blog_posts"
     )
-    category = models.ForeignKey(Category, on_delete=models.CASCADE,
-                                 default=True, null=False)
+    category = models.ForeignKey(
+        Category, on_delete=models.CASCADE, default=get_default_category
+        )
     featured_image = CloudinaryField('image', default='placeholder')
     excerpt = models.TextField(blank=True)
     updated_on = models.DateTimeField(auto_now=True)
@@ -39,9 +44,6 @@ class Post(models.Model):
 
     class Meta:
         ordering = ["-created_on"]
-
-    def init(self):
-        self.slug = slugify(self.title)
 
     def __str__(self):
         return self.title + ' | ' + str(self.author)
