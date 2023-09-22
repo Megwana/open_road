@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 from django.contrib.messages import get_messages
 from django.urls import reverse
 from unittest.mock import patch
-from .models import Post, get_default_category, Comment
+from .models import Post, get_default_category, Comment, Category
 from .views import (PostList, PostDetail, PostLike,
                     PostCreate, PostUpdate, PostDelete)
 
@@ -136,3 +136,25 @@ class PostViewTests(TestCase):
         response = self.client.post(
             reverse('post_delete', args=[self.post.pk]))
         self.assertEqual(response.status_code, 302)
+
+    @patch(
+        'roadtrips.models.Post.delete',
+        side_effect=Exception('Forced DB Delete Exception'))
+    def test_post_delete_exception(self, mock_delete):
+        category = Category.objects.create(name='TestCategory')
+        # Create a post to delete
+        post = Post.objects.create(
+            title='Test Post',
+            content='Test Content',
+            status=1,
+            author=self.user,
+            category=category
+        )
+
+        response = self.client.post(reverse('post_delete', args=[post.pk]))
+
+        error_msg = "Failed to delete post. Error: Forced DB Delete Exception"
+        messages_list = list(get_messages(response.wsgi_request))
+
+        self.assertIn(error_msg, str(messages_list[0]))
+        self.assertRedirects(response, reverse('home'))
