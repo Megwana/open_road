@@ -1,5 +1,3 @@
-const { getButtonById, getBodyScrollTop, getDocumentElementScrollTop } = require('./domUtils');
-
 // Get the button:
 let mybutton = document.getElementById("myBtn");
 
@@ -20,3 +18,4 @@ function topFunction() {
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
 
+module.exports = { scrollFunction, topFunction };
