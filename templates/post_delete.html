@@ -2,15 +2,16 @@
 {% block title %} Delete Roadtrip Post {% endblock %}
 {% load crispy_forms_tags %}
 {% block content %}
-    <section class="container">
-        <h1>Delete: {{ post.title }}</h1>
-        <div class="form-group">
-            <form method="POST">
-                {% csrf_token %} <br>
-                <strong>Are you sure?</strong><br>
-                </div>
-                <button class="btn btn-danger" type="submit">Delete Post</button>
-            </form>
-        </div>
-    </section>
+<section class="container">
+    <h1>Delete: {{ post.title }}</h1>
+    <div class="confirmation-container">
+        <form method="POST">
+            {% csrf_token %}
+            <div class="form-group">
+                <div class="confirmation-text"><strong>Are you sure?</strong></div>
+                <div><button class="btn btn-danger" type="submit">Delete Post</button></div>
+            </div>
+        </form>
+    </div>
+</section>
 {% endblock %}

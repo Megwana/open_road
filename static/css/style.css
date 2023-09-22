@@ -171,3 +171,20 @@ hr {
   #myBtn:hover {
     background-color: #555; /* Add a dark-grey background on hover */
   }
+
+  .confirmation-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - (height-of-your-header + height-of-your-footer)); 
+    font-size: 14px;
+}
+
+.confirmation-text {
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
