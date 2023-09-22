@@ -112,6 +112,7 @@ class PostViewTests(TestCase):
 
         self.assertEqual(response.status_code, 302)
 
+    # temporary mock of a Post Update for test
     @patch(
         'roadtrips.views.UpdateView.form_valid',
         side_effect=Exception('Forced Update Exception'))
@@ -125,7 +126,7 @@ class PostViewTests(TestCase):
             'category': get_default_category()
         }
 
-        # Make a POST request to update the post
+        # POST request to update the post
         response = self.client.post(
             reverse('post_update', args=[self.post.pk]), form_data)
         error_msg = "Failed to update post. Error: Forced Update Exception"

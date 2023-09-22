@@ -118,7 +118,7 @@ class PostCreate(CreateView):
             return response
         except Exception as e:
             messages.error(self.request, f"Failed to create post. Error: {e}")
-            # redirect back to the same page 
+            # redirect back to the same page
             return HttpResponseRedirect(reverse('post_create'))
 
 
@@ -140,7 +140,7 @@ class PostUpdate(UpdateView):
         except Exception as e:
             messages.error(self.request, f"Failed to update post. Error: {e}")
             return HttpResponseRedirect(
-                # redirect back to the same page 
+                # redirect back to the same page
                 reverse('post_update', args=[self.object.pk]))
 
 
