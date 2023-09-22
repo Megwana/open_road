@@ -1,6 +1,7 @@
 from django.test import TestCase
 from .forms import PostForm, CommentForm
 from .models import Category, Post
+from django.contrib.auth import authenticate
 from django.contrib.auth.models import User
 
 
