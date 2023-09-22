@@ -1,5 +1,16 @@
 {
   "dependencies": {
     "bootstrap": "^5.3.0-alpha3"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "jsdom": "^22.1.0"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "jest": {
+    "testEnvironment": "jsdom"
   }
+  
 }
