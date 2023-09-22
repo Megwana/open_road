@@ -2,7 +2,7 @@ from django.test import TestCase
 from django.contrib.auth.models import User
 from django.urls import reverse
 from unittest.mock import patch
-from .models import Post, get_default_category
+from .models import Post, get_default_category, Comment
 from .views import (PostList, PostDetail, PostLike,
                     PostCreate, PostUpdate, PostDelete)
 
@@ -46,6 +46,12 @@ class PostViewTests(TestCase):
             reverse('post_like', args=[self.post.slug]))
         self.assertEqual(response.status_code, 302)
 
+    def test_post_unlike_view(self):
+        self.post.likes.add(self.user)
+        self.assertTrue(self.post.likes.filter(id=self.user.id).exists())
+        response = self.client.post(reverse('post_like', args=[self.post.slug]))
+        self.assertFalse(self.post.likes.filter(id=self.user.id).exists())
+
     def test_post_create_view(self):
         form_data = {
             'title': 'New Post',
@@ -57,8 +63,6 @@ class PostViewTests(TestCase):
 
         response = self.client.post(reverse('post_create'), form_data)
 
-        if response.context and 'form' in response.context:
-            print(response.context['form'].errors)
         self.assertEqual(response.status_code, 302)
 
     def test_post_update_view(self):
@@ -71,10 +75,7 @@ class PostViewTests(TestCase):
         }
         response = self.client.post(reverse(
             'post_update', args=[self.post.pk]), form_data)
-        print(response.status_code)
 
-        if response.context and 'form' in response.context:
-            print(response.context['form'].errors)
         self.assertEqual(response.status_code, 302)
 
     def test_post_delete_view(self):

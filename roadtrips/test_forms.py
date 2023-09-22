@@ -20,9 +20,6 @@ class PostFormTest(TestCase):
             'content': 'Test content',
         })
 
-        if not form.is_valid():
-            print(form.errors)
-
         self.assertTrue(form.is_valid())
 
     def test_post_form_invalid_data_type(self):
