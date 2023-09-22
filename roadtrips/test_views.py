@@ -1,5 +1,6 @@
 from django.test import TestCase
 from django.contrib.auth.models import User
+from django.contrib.messages import get_messages
 from django.urls import reverse
 from unittest.mock import patch
 from .models import Post, get_default_category, Comment
@@ -78,6 +79,25 @@ class PostViewTests(TestCase):
         response = self.client.post(reverse('post_create'), form_data)
 
         self.assertEqual(response.status_code, 302)
+
+    # temporary mock of a Post save for test
+    @patch(
+        'roadtrips.models.Post.save',
+        side_effect=Exception('Forced DB Save Exception'))
+    # Check exception with error message works if post fails to create in db
+    def test_post_create_db_exception(self, mock_save):
+        form_data = {
+            'title': 'New Post',
+            'content': 'New Content',
+            'status': 1,
+            'author': self.user.id,
+            'category': get_default_category()
+        }
+
+        response = self.client.post(reverse('post_create'), form_data)
+        error_msg = "Failed to create post. Error: Forced DB Save Exception"
+        messages_list = list(get_messages(response.wsgi_request))
+        self.assertIn(error_msg, str(messages_list[0]))
 
     def test_post_update_view(self):
         form_data = {

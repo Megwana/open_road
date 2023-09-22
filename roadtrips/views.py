@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from django.views import View
 from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 from django.http import HttpResponseRedirect
-from django.urls import reverse_lazy
+from django.urls import reverse, reverse_lazy
 from django.contrib import messages
 from .models import Post
 from .forms import CommentForm, PostForm
@@ -118,6 +118,7 @@ class PostCreate(CreateView):
             return response
         except Exception as e:
             messages.error(self.request, f"Failed to create post. Error: {e}")
+            return HttpResponseRedirect(reverse('post_create'))
 
 
 class PostUpdate(UpdateView):
