@@ -3,7 +3,7 @@ from django.contrib.auth import authenticate
 from django.contrib.auth.models import User
 
 
-class AuthenticationTestCase(TestCase):
+class AuthenticationTest(TestCase):
 
     def setUp(self):
         self.user = User.objects.create_user(
