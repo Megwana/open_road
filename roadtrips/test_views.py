@@ -41,6 +41,19 @@ class PostViewTests(TestCase):
             'post_detail', args=[self.post.pk]), form_data)
         self.assertEqual(response.status_code, 200)
 
+    def test_invalid_comment_submission(self):
+        form_data = {
+            'name': '',
+            'email': 'commenter@test.com',
+            'content': 'Test Comment Content'
+        }
+        response = self.client.post(
+            reverse('post_detail', args=[self.post.pk]),
+            form_data)
+        self.assertIn(
+            'Failed to add comment. Please enter valid input.',
+            response.content.decode())
+
     def test_post_like_view(self):
         response = self.client.post(
             reverse('post_like', args=[self.post.slug]))
@@ -49,7 +62,8 @@ class PostViewTests(TestCase):
     def test_post_unlike_view(self):
         self.post.likes.add(self.user)
         self.assertTrue(self.post.likes.filter(id=self.user.id).exists())
-        response = self.client.post(reverse('post_like', args=[self.post.slug]))
+        response = self.client.post(
+            reverse('post_like', args=[self.post.slug]))
         self.assertFalse(self.post.likes.filter(id=self.user.id).exists())
 
     def test_post_create_view(self):
