@@ -73,7 +73,9 @@ Please find all my user stories & acceptance criteria in greater detail [here]()
 
 **Kanban Board**
 
+`1.3 Mapping User Story Criteria:`
 Please also see this illustrated on my Kanban Board that has been marked Public:
+
 Project set to [Public Visibility](https://res.cloudinary.com/dfdbnig1r/image/upload/v1695428002/PublicProject_qrovmt.png).
 ![User Story Kanban Board](https://res.cloudinary.com/dfdbnig1r/image/upload/v1695428000/KanbanUserStory_np9nhn.png)
 
