@@ -2,17 +2,6 @@
 {% block title %} Edit Roadtrip Post {% endblock %}
 {% load crispy_forms_tags %}
 {% block content %}
-<!-- <div>
-    {% if posted %}
-        <div class="alert alert-success" role="alert">
-            Thank you for submitting! Your Roadtrip post is awaiting approval.
-        </div>
-    {% else %}
-        <div class="alert alert-danger" role="alert">
-            I'm sorry, there was an issue submitting your form. Please try again.
-        </div>
-    {% endif %}
-</div> -->
 {% if user.is_authenticated %}
     {% if user.id == post.author.id %}
         <section class="container">

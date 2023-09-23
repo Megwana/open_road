@@ -4,7 +4,7 @@ Introduction: This repository is also based off of another repository I created,
 
 ![Am I Responsive VIew](/static/images/amiresponsive.png)
 
-View DEPLOYMENT Link [here](https://openroadd.herokuapp.com)
+Depoloyed [Link to Heroku](https://openroadd.herokuapp.com)
 
 ## Table of Contents
 ---
@@ -529,6 +529,27 @@ I did not carry out a manual test for the 500 error because this error typically
 - [Lighthouse Post List](https://res.cloudinary.com/dfdbnig1r/image/upload/v1695439612/LighthousePostList_erhfce.png)
 
 ### Bugs and Fixes
+
+1. I had a bug where my css and js would not load once setting the DEBUG to False and in the Heroku Deployed interface.
+
+Solution: Add {% load static %} to base.html and change css and js links to: 
+   - `<link type="text/css" rel="stylesheet" href="{% static 'css/style.css' %}">`
+   - `<script src="{% static 'js/index.js' %}"></script>`
+
+2. Images were not uploading from users wanting to create a post.
+
+Solution: Add this code = `<form method="POST" enctype="multipart/form-data">`
+
+3. test_views was failing due to an issue when running error messages regarding updating post/ deleting etc. 
+
+Solution: Add httpResponseRedirects to relevant pages, this allowed the failing tests to pass.
+
+Unresolved Bug:
+
+My Favicon is not showing despite make alterations to its path and setting in the root of static folder. 
+
+Future Solution: I'm going to use a different favicon to see if this makes a difference and add different sizings for varying devices.
+
 --- 
 ## Deployment 
 The main branch of my repository open_road, has been used for the deployment of this application.
