@@ -17,6 +17,7 @@ Depoloyed [Link to Heroku](https://openroadd.herokuapp.com)
     * [Home Page](#home-page)
     * [Road Trips](#road-trips)
     * [CRUD Notifications](#crud-notifications)
+    * [Future Features](#future-features)
 - [Technologies Used](#technologies-used)
 - [Testing](#testing)
     * [Code Validation](#code-validation)
@@ -250,6 +251,16 @@ On the 404 Page the user is provided with a link to redirect them back to the ho
 ![404 (Page Not Found)](https://res.cloudinary.com/dfdbnig1r/image/upload/v1695424430/404Page_yjv1po.png)
 - 500 (Internal Server Error)
 ![500 Internal Server Error](https://res.cloudinary.com/dfdbnig1r/image/upload/v1695424429/500Page_pi4ngn.png)
+
+### Future Features
+
+For the future, my favourite features I would look to add to the project are:
+
+1. Edit and Delete Comments
+2. Favicon - See for further detail [Unresolved Bug](#unresolved-bug)
+3. More Advanced Presenting Content Box
+4. Notification for when a new user successfully registers
+5. A contact form, to allow users to send in feedback of things they may like to be included on the site. 
 
 ---
 ## Technologies Used
@@ -544,11 +555,11 @@ Solution: Add this code = `<form method="POST" enctype="multipart/form-data">`
 
 Solution: Add httpResponseRedirects to relevant pages, this allowed the failing tests to pass.
 
-Unresolved Bug:
+#### Unresolved Bug:
 
 My Favicon is not showing despite make alterations to its path and setting in the root of static folder. 
 
-Future Solution: I'm going to use a different favicon to see if this makes a difference and add different sizings for varying devices.
+Future Solution: I'm going to use a different favicon to see if this makes a difference and add different sizings for varying devices. This bug has been left unfixed in order to focus on more important tasks such as successful deployment and checking over my work as a whole. However, I wanted to note that this is a small task I can rectify in the future.
 
 --- 
 ## Deployment 
