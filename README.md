@@ -507,7 +507,14 @@ W3C HTML Validator
 W3C CSS Validator
 JSHint JavaScript validator
 Python validation
-Lighthouse testing
+
+#### Lighthouse Testing
+
+- [Lighthouse Home Page](https://res.cloudinary.com/dfdbnig1r/image/upload/v1695439612/LighthouseHome_gwiv3z.png)
+- [Lighthouse Sign Up](https://res.cloudinary.com/dfdbnig1r/image/upload/v1695439612/LighthouseSignUp_agjtq0.png)
+- [Lighthouse Login](https://res.cloudinary.com/dfdbnig1r/image/upload/v1695439612/LighthouseLogin_azgj1c.png)
+- [Lighthouse Create Post](https://res.cloudinary.com/dfdbnig1r/image/upload/v1695439612/LighthouseCreatePost_kwab9c.png)
+- [Lighthouse Post List](https://res.cloudinary.com/dfdbnig1r/image/upload/v1695439612/LighthousePostList_erhfce.png)
 
 ### Bugs and Fixes
 --- 
