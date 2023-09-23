@@ -119,18 +119,26 @@ Please note, the website differs slightly from the original wireframes.
 
 The theme is supposed to be clean cut and simple, offering the simplicity that is a humbling road trip journey. I have used bootstrap to create styling and design to my website. 
 
-[Wireframes can be viewed here](https://share.balsamiq.com/c/jFLAg5a7apUrV86ucTo7tU.png)
+`Wireframes`:
+
+    Below are my wireframes for the project, I have divided the wireframes into 4 categories. 
+    Home Page design, Posts List (Road Trips), Authentication (What login, register pages will look like structure wise); and what the Create and Edit Pages will look like.
+- [Home Page Wireframe](https://res.cloudinary.com/dfdbnig1r/image/upload/v1695430296/HomeWireframe_dyutuz.png)
+- [Road Trip Posts Page Wireframe](https://res.cloudinary.com/dfdbnig1r/image/upload/v1695430295/RoadTripsWireframe_qajgmk.png)
+- [Authentication Wireframe](https://res.cloudinary.com/dfdbnig1r/image/upload/v1695430295/AuthenticationWireframe_vcmpop.png)
+- [Create/ Edit Wireframe](https://res.cloudinary.com/dfdbnig1r/image/upload/v1695430297/AddPostWireframe_geo9pz.png)
 
 I chose a dark green colour to offer a nature theme to the site as road trips around the USA are heavily influence by the immersive experience in the great unknown. 
 The Layout has changed on the home page due to the following:
 I wanted to add a comment model to delete comments, I was having some trouble so I seeked help from Tutor support. I was advised to restart the databased and continue fom there. After succesfully transferring the db. My bootstrap and summernote was half showing, half not. I changed bootstrap 4 to 5 to fix the bootstrap issue. But code for the bootstrap 4 layout was no longer viable. 
 
-Please see attached Data Schema:
+Please see attached Data Schema below:
 
-![data schema](https://1drv.ms/i/s!AmAU40Ai2GROhwf7nA-FXsepnVP6)
-
+[Data schema](https://res.cloudinary.com/dfdbnig1r/image/upload/v1695428262/DataSchema_ke2bfy.png)
 ---
+
 ## Features
+
 ### Home Page
 ![home page](https://1drv.ms/i/s!AmAU40Ai2GROhnQdXP8KSgiWsjsm) Home Page
 
