@@ -71,9 +71,11 @@ Please find all my user stories & acceptance criteria in greater detail [here]()
 - USER STORY: Accout Registration.
 - USER STORY: Informative landing page.
 
-Please also see this illustrated on my Kanban Board:
+**Kanban Board**
 
-**LINK**
+Please also see this illustrated on my Kanban Board that has been marked Public:
+Project set to [Public Visibility](https://res.cloudinary.com/dfdbnig1r/image/upload/v1695428002/PublicProject_qrovmt.png).
+![User Story Kanban Board](https://res.cloudinary.com/dfdbnig1r/image/upload/v1695428000/KanbanUserStory_np9nhn.png)
 
 | # | Feature | Importance | Viability |
 | --- | --- | --- | --- |
@@ -288,9 +290,23 @@ To generate your own coverage report from the command line:
 
 ### Automated Testing
 
-LO4 4.2
+`LO4 - Create automated tests for a Full-Stack-Web application using an MVC framework and related contemporary technolgies:`
 
-LO4 4.3 
+`LO4 4.1: Automated Testing of Python to assess functionality carried out below.`
+
+- [Test Views](https://res.cloudinary.com/dfdbnig1r/image/upload/v1695427689/TestViews13_mnn8oe.png)
+
+- [Test authentication](https://res.cloudinary.com/dfdbnig1r/image/upload/v1695424428/test_authentication_wqcwuz.png)
+
+- [Test Forms](https://res.cloudinary.com/dfdbnig1r/image/upload/v1695424427/formsTest_yhr7rf.png)
+
+![Coverage](https://res.cloudinary.com/dfdbnig1r/image/upload/v1695424431/CoverageReport100_fatb3n.png)
+
+`LO4 4.2: Automated Testing for JavaScript to assess functionality carried out below.`
+
+![Jest Testing](https://res.cloudinary.com/dfdbnig1r/image/upload/v1695424427/JestTest_iwt9jh.png)
+
+**LO4 4.3: Both manual and automated testing have been carried out for this project and conscientiously documented throughout this README file.**
 
 ### Validator Testing
 
