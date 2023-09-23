@@ -132,6 +132,14 @@ The theme is supposed to be clean cut and simple, offering the simplicity that i
 - [Create/ Edit Wireframe](https://res.cloudinary.com/dfdbnig1r/image/upload/v1695430297/AddPostWireframe_geo9pz.png)
 
 I chose a dark green colour to offer a nature theme to the site as road trips around the USA are heavily influence by the immersive experience in the great unknown. 
+
+|   Color           |   Hex                                                   |
+| ----------------- | ------------------------------------------------------|
+| English Holly | [#023020](https://imagecolorpicker.com/color-code/023020) |
+| Black         | [#000000](https://imagecolorpicker.com/color-code/000000) |
+| White         | [#ffffff](https://imagecolorpicker.com/color-code/ffffff) |
+| Emperor       | [#555555](https://imagecolorpicker.com/color-code/555555) |
+
 The Layout has changed on the home page due to the following:
 I wanted to add a comment model to delete comments, I was having some trouble so I seeked help from Tutor support. I was advised to restart the databased and continue fom there. After succesfully transferring the db. My bootstrap and summernote was half showing, half not. I changed bootstrap 4 to 5 to fix the bootstrap issue. But code for the bootstrap 4 layout was no longer viable. 
 
@@ -267,7 +275,7 @@ For the future, my favourite features I would look to add to the project are:
 ### Languages 
 - [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
 - [CSS](https://www.w3.org/Style/CSS/Overview.en.html#:~:text=Cascading%20Style%20Sheets%20(CSS)%20is,from%20the%20CSS%20working%20group.)
-- JavaScript
+- [JavaScript](https://www.javascript.com/)
 - [Python](https://www.python.org/)
     - Python used to write all of the code in this application that makes it fully functional.
 - [Django](https://www.djangoproject.com/)
