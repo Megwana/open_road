@@ -248,6 +248,8 @@ I wanted to highlight the notifications of successfull or failed CRUD operations
 - Unlike a Post: The user is notified that when they click on a post again that they have liked. It successfully removes the like. 
 ![Like Removed](https://res.cloudinary.com/dfdbnig1r/image/upload/v1695424431/LikeRemoved_heskte.png)
 
+In addition, fail notifications have been set up in the event this occurs. These can be reviewed in [Views.py](./roadtrips/views.py). And these have been tested and run successfully which can be reviewed via [test_views.py](./roadtrips/test_views.py).
+
 ### Error Pages
 
 The User is provided with error pages should they come across the following 404 or 500 Error message. 
