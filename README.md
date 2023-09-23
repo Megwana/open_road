@@ -503,10 +503,22 @@ I did not carry out a manual test for the 500 error because this error typically
 
 ### Validator Testing
 
-W3C HTML Validator
-W3C CSS Validator
-JSHint JavaScript validator
-Python validation
+#### W3C HTML Validator
+
+![W3C HTML Validator](https://res.cloudinary.com/dfdbnig1r/image/upload/v1695440878/W3CValidatorhtml_ptzr7c.png)
+
+#### W3C CSS Validator
+
+![W3C CSS Validator](https://res.cloudinary.com/dfdbnig1r/image/upload/v1695440878/W3CValidatorCss_cklugm.png)
+
+#### JSHint JavaScript validator
+
+![JSHint JavaScript validator](https://res.cloudinary.com/dfdbnig1r/image/upload/v1695440878/JSHintValidator_rywlml.png)
+
+#### Python validation
+
+![PEP8 Intallation](https://res.cloudinary.com/dfdbnig1r/image/upload/v1695440878/pycodeStyleinstalled_ccq7mi.png)
+![Terminal Status](https://res.cloudinary.com/dfdbnig1r/image/upload/v1695440879/NoPep8Problems_b04jvk.png)
 
 #### Lighthouse Testing
 
