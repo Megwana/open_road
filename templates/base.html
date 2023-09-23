@@ -1,4 +1,4 @@
-<!-- {% load static %} -->
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,12 +12,12 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <!--CSS stylesheet-->
-    <link rel="stylesheet" href="/static/css/style.css">
+    <link type="text/css" rel="stylesheet" href="{% static 'css/style.css' %}">
     <!--favicon icons-->
-    <link rel="shortcut icon" type="image/png" href="/static/favicon/favicon.ico" />
-              <!--Font Awesome-->
-              <script src="https://kit.fontawesome.com/33824b6518.js" crossorigin="anonymous"></script>
-  <!-- block title created in base template to act universally for other html documents -->
+    <link rel="icon" type="image/x-icon" href="{% static 'favicon/favicon.ico' %}" />
+    <!--Font Awesome-->
+    <script src="https://kit.fontawesome.com/33824b6518.js" crossorigin="anonymous"></script>
+    <!-- block title created in base template to act universally for other html documents -->
   <title>
     {% block title %}{% endblock %}
   </title>
@@ -72,7 +72,7 @@
           </div>
     {% block content %}
     {% endblock %}
-    <script src="../static/js/index.js"></script>
+    <script src="{% static 'js/index.js' %}"></script>
     <!--Bootstrap scripts-->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
