@@ -141,11 +141,14 @@ Please see attached Data Schema below:
 
 ### Home Page
 
-Home Page
+Home Page: This features a links to Roadtrips by clicking the Read More link and a Carousel to feel inspired to get on the road!
 ![home page](https://res.cloudinary.com/dfdbnig1r/image/upload/v1695430937/HomePage_nfqlq9.png)
 
 Navigation Bar: The nav bar has links to all the active pages. This allows the user to clearly identify each option and navigate to where they want. 
 ![NavBar](https://res.cloudinary.com/dfdbnig1r/image/upload/v1695428000/NavBar_wtmoo3.png)
+
+Logo: The logo when clicked, will redirect users back to the home page.
+![Logo](https://res.cloudinary.com/dfdbnig1r/image/upload/v1695427996/Logo_na2qew.png)
 
 The Nav bar is fully responsive and collapses on mobile devices to a hamburger icon. This allows the user to easily access the navigation links without the hassle of pressing back buttons on the browser. Or struggling to read small text along the bar. 
 ![Hamburger](https://res.cloudinary.com/dfdbnig1r/image/upload/v1695427999/SmallerScreenNavBar_mzvttf.png)
@@ -188,7 +191,7 @@ Once logged in, users with log ins are able to edit their own blog experiences.
 ![Delete](https://res.cloudinary.com/dfdbnig1r/image/upload/v1695428003/ConfirmationDelete_yl1ue8.png)
 Once logged in, users with log ins are able to delete their own blog posts. 
 
-![Comment](https://1drv.ms/i/s!AmAU40Ai2GROhwW86wQ92eRZsa_W)
+![Comment](https://res.cloudinary.com/dfdbnig1r/image/upload/v1695427993/Comment_atgkxy.png)
 ### Comment on posts
 
 Once logged in, users with log ins are able to leave comments on travel posts.
@@ -200,6 +203,14 @@ Once logged in, users with log ins are able to like posts.
 ![Liked](https://res.cloudinary.com/dfdbnig1r/image/upload/v1695431404/Liked_ginmeg.png)
 
 ![Not yet Like](https://res.cloudinary.com/dfdbnig1r/image/upload/v1695431403/NoLike_vts7bu.png)
+
+### Pagination
+
+![Pagination](https://res.cloudinary.com/dfdbnig1r/image/upload/v1695427995/Pagination_oonslw.png)
+
+### Scroll Top Function
+
+![Back to top of Page](https://res.cloudinary.com/dfdbnig1r/image/upload/v1695427997/ScrollFunction_vwrvao.png)
 
 ### CRUD Notifications
 
@@ -301,6 +312,172 @@ To generate your own coverage report from the command line:
 4. To access the report via the browser, use the command `python3 -m http.server` and open `index.html` file from inside `htmlcov` folder, that will appear. 
 
 ### Manual Testing
+
+During the development process, I have conducted a number of manual tests to ensure the functionality and usability of my website. Please see a detailed description of the testing process undergone for each feature:
+
+#### Home Page:
+
+```homepage
+Navigation Bar:
+
+Steps
+    Click on each link in the navbar to ensure they redirect to appropriate page.
+    Test on multiples devices
+Expected Outcome
+    Each link redirects to appropriate page.
+    On smaller screens, navbar collapses into hamburger icon.
+Results
+    All functions as expected.
+
+Logo:
+
+Steps
+    Click on logo from different pages.
+Expected Outcome
+    User redirected to home page.
+Results
+    Functions as expected.
+```
+
+#### Add New Post:
+
+```addroadtrip
+Add New Post:
+
+Steps
+    Log in and navigate to the section to add a new blog post.
+    Fill in the necessary details and submit the form.
+Expected Outcome
+    A success notification appears stating the post has been created and is waiting for approval.
+    The new post appears as a draft (if there's a draft visibility feature).
+Results
+    All functions as expected.
+
+View Post:
+
+Steps
+    Navigate to the Road trips page.
+    Ensure all published posts are displayed.
+    If logged in, ensure Edit and Delete buttons are visible for the user's own posts.
+Expected Outcome
+    Posts are visible.
+    Edit and Delete buttons are visible only for the user's posts.
+Results
+    Functions as expected.
+```
+
+#### Edit Post:
+
+```editroadtrip
+Edit Post:
+
+Steps
+    Navigate to one of your existing blog posts.
+    Click on the 'Edit' button and modify content.
+    Submit the form to save changes.
+Expected Outcome
+    The content is updated and reflects the changes made.
+    A success notification appears indicating the post has been updated.
+Results
+    All functions as expected.
+```
+
+#### Delete Post:
+
+```deleteroadtrip
+Delete Post:
+
+Steps
+    Navigate to one of your existing blog posts.
+    Click on the 'Delete' button and confirm the deletion.
+Expected Outcome
+    The blog post is removed from the list of posts.
+    A success notification appears indicating the post has been deleted.
+Results
+    All functions as expected.
+```
+
+#### Commment on Post:
+
+```commentroadtrip
+Comment on Post:
+
+Steps
+    Navigate to one of your existing blog posts.
+    Click on the 'Edit' button and modify some content.
+    Submit the form to save changes.
+Expected Outcome
+    The content is updated and reflects the changes made.
+    A success notification appears indicating the post has been updated.
+Results
+    All functions as expected.
+```
+#### Like and Unlike a Post
+
+```likeunlikeroadtrip
+Like a Post:
+
+Steps
+    Navigate to an existing blog post.
+    Click on the 'Like' button or icon.
+Expected Outcome
+    The like counter increases.
+    A success notification appears indicating the post has been liked.
+Results
+    All functions as expected.
+
+Unlike a Post:
+
+Steps
+    Navigate to an existing blog post that you've already liked.
+    Click on the 'Unlike' button or icon.
+Expected Outcome
+    The like counter decreases.
+    A success notification appears indicating the post has been unliked.
+Results
+    All functions as expected.
+```
+
+#### Pagination:
+
+```pagination
+Steps
+    Navigate to the main posts page.
+    Click on the next page or a specific page number.
+Expected Outcome
+    The page displays the next set of posts based on the pagination setting.
+Results
+    All functions as expected.
+```
+
+#### Scroll Top Function:
+
+```scrolltop
+Steps
+    Scroll down on any long page until the "top" button appears.
+    Click on the "top" button.
+Expected Outcome
+    The page smoothly scrolls back to the top.
+Results
+    All functions as expected.
+```
+
+#### Error Handling:
+
+```errorhandling
+404 - Page Not Found:
+
+Steps
+    Intentionally navigate to an invalid URL on the website.
+Expected Outcome
+    404 error page is displayed with a message and a link back to the home page.
+Results
+    All functions as expected.
+
+500 - Internal Server Error:
+
+I did not carry out a manual test for the 500 error because this error typically means there is an unexpected error with the server.
+```
 
 ### Automated Testing
 
