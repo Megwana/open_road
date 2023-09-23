@@ -140,49 +140,52 @@ Please see attached Data Schema below:
 ## Features
 
 ### Home Page
-![home page](https://1drv.ms/i/s!AmAU40Ai2GROhnQdXP8KSgiWsjsm) Home Page
 
-![NavBar](https://1drv.ms/f/s!AmAU40Ai2GROhnOso_L8flCTVH_m)Navigation Bar: The nav bar has links to all the active pages. This allows the user to clearly identify each option and navigate to where they want. 
+Home Page
+![home page](https://res.cloudinary.com/dfdbnig1r/image/upload/v1695430937/HomePage_nfqlq9.png)
 
-![Hamburger](https://1drv.ms/i/s!AmAU40Ai2GROhngHedK3ftxL_Xjb)
+Navigation Bar: The nav bar has links to all the active pages. This allows the user to clearly identify each option and navigate to where they want. 
+![NavBar](https://res.cloudinary.com/dfdbnig1r/image/upload/v1695428000/NavBar_wtmoo3.png)
+
 The Nav bar is fully responsive and collapses on mobile devices to a hamburger icon. This allows the user to easily access the navigation links without the hassle of pressing back buttons on the browser. Or struggling to read small text along the bar. 
+![Hamburger](https://res.cloudinary.com/dfdbnig1r/image/upload/v1695427999/SmallerScreenNavBar_mzvttf.png)
 
-![LoggedInNav](https://1drv.ms/i/s!AmAU40Ai2GROhntafiJJ1UST5Zy3) ![LoggedOutNav](https://1drv.ms/i/s!AmAU40Ai2GROhnmdx6S5a5KihmIQ)
 Navbar difference depending on whether the user is logged in or not. 
+![LoggedInNav](https://res.cloudinary.com/dfdbnig1r/image/upload/v1695428000/NavBar_wtmoo3.png) ![LoggedOutNav](https://res.cloudinary.com/dfdbnig1r/image/upload/v1695431158/LoggedOutNav_w8t6yr.png)
 
-![ReadMore](https://1drv.ms/i/s!AmAU40Ai2GROhnZ2UvApc-iLNQVG)
 Links to road trips - This offers a second option to the user in case they are scrolling on the home page initially and decide they want to view posts. 
+![ReadMore](https://res.cloudinary.com/dfdbnig1r/image/upload/v1695427998/ReadMore_mzfmny.png)
 
 ### Road trips
 
-![Post Detail](https://1drv.ms/i/s!AmAU40Ai2GROhn9dDBrDQwtpfLzE)
 Site users are able to view blog posts from people's road trips around the USA.
+![Post Detail](https://res.cloudinary.com/dfdbnig1r/image/upload/v1695428010/PostDetail_tgjdzc.png)
 
-![Roadtrips Edit and Delete](https://1drv.ms/i/s!AmAU40Ai2GROhwCKVSWDJwkpb3AQ)
 If the user is logged in, they are able to view `Edit` and `Delete` buttons for posts they have published. Otherwise they are not able to do so with others posts.
+![Roadtrips Edit and Delete](https://res.cloudinary.com/dfdbnig1r/image/upload/v1695428013/EditDelete_e1411c.png)
 
 ### Post Detail
 
-![ViewPost](https://1drv.ms/i/s!AmAU40Ai2GROhn9dDBrDQwtpfLzE)
-Here the user is able to view the blog post in full detail and comment if they wish to share an opinion or feeback. 
+Here the user is able to view the blog post in full detail and comment if they wish to share an opinion or feeback.
+![ViewPost](https://1drv.ms/i/s!AmAU40Ai2GROhn9dDBrDQwtpfLzE) 
 
-![Edit & Delete](https://1drv.ms/i/s!AmAU40Ai2GROhn9dDBrDQwtpfLzE)
 If the user is logged in, they are able to view `Edit` and `Delete` buttons for posts they have published. Otherwise they are not able to do so with others posts.
+![Edit & Delete](https://res.cloudinary.com/dfdbnig1r/image/upload/v1695431594/PostDetailEditDelete_sxl2c1.png)
 
 ### Add Road trips
 
-![Create](https://1drv.ms/i/s!AmAU40Ai2GROhnrE5GJdpHJbOafT)
 Once logged in, users with log ins are able to add their own blog experiences. 
 All posts must be approved by the admin before being published. When added the post is defaulted to a draft until approved.
+![Create](https://res.cloudinary.com/dfdbnig1r/image/upload/v1695427993/CreatePost_wezc2o.png)
 
 ### Edit Road trips
 
-![Edit](https://1drv.ms/i/s!AmAU40Ai2GROhwQ0FNT6P3vmq-BO)
 Once logged in, users with log ins are able to edit their own blog experiences. 
+![Edit](https://res.cloudinary.com/dfdbnig1r/image/upload/v1695428004/EditPost_azhk40.png)
 
 ### Delete Road trips
 
-![Delete](https://1drv.ms/i/s!AmAU40Ai2GROhwEr-f4z7X7kvg5a)
+![Delete](https://res.cloudinary.com/dfdbnig1r/image/upload/v1695428003/ConfirmationDelete_yl1ue8.png)
 Once logged in, users with log ins are able to delete their own blog posts. 
 
 ![Comment](https://1drv.ms/i/s!AmAU40Ai2GROhwW86wQ92eRZsa_W)
@@ -190,10 +193,13 @@ Once logged in, users with log ins are able to delete their own blog posts.
 
 Once logged in, users with log ins are able to leave comments on travel posts.
 
-### Like a post
+### Like and Unlike a post
 
-![Like]()
 Once logged in, users with log ins are able to like posts.
+
+![Liked](https://res.cloudinary.com/dfdbnig1r/image/upload/v1695431404/Liked_ginmeg.png)
+
+![Not yet Like](https://res.cloudinary.com/dfdbnig1r/image/upload/v1695431403/NoLike_vts7bu.png)
 
 ### CRUD Notifications
 
